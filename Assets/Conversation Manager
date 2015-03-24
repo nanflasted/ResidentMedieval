@@ -1,0 +1,80 @@
+//David Merriman
+using UnityEngine;
+using UnityEngine.UI;
+using System.Collections;
+using System.Collections.Generic;
+
+//convo manager, holds a linked list containing conversation progression
+public class ConversationManager : MonoBehaviour {
+
+	public Text[] playerResponses;
+	public Text[] npcResponses;
+	
+	private int conversationIndex = 0;
+	private ArrayList list = new ArrayList();
+	
+	//initializes conversation progression (i.e builds list)
+	void Start()
+	{
+		Text[] playerNodeResponses;
+		Text[] npcNodeResponses;
+		
+		for(int i = 0; i < playerResponses.Length; i += 3)
+		{
+			playerNodeResponses = new Text[3] {playerResponses[i], playerResponses[i + 1], playerResponses[i + 2]};
+			npcNodeResponses = new Text[3] {npcResponses[i], npcResponses[i + 1], npcResponses[i + 2]};
+			list.Add(new ConversationNode(playerNodeResponses, npcNodeResponses));
+		}
+	}
+	
+	//advances conversation to next node
+	public ConversationNode AdvanceConversation()
+	{
+		return (ConversationNode)list[conversationIndex++];
+	}
+	
+}
+
+public class ConversationNode
+{
+	private Text[] playerResponses;
+	private Text[] npcResponses;
+	
+	//all arrays should be size three
+	public ConversationNode(Text[] playerResponses, Text[] npcResponses)
+	{
+		this.playerResponses = playerResponses;
+		this.npcResponses = npcResponses;
+	}
+	
+	//getters for player and npc responses
+	public Text GetPlayerResponse1()
+	{
+		return playerResponses[0];
+	}
+	
+	public Text GetPlayerResponse2()
+	{
+		return playerResponses[1];
+	}
+	
+	public Text GetPlayerResponse3()
+	{
+		return playerResponses[2];
+	}
+	
+	public Text GetNpcResponse1()
+	{
+		return npcResponses[0];
+	}
+	
+	public Text GetNpcResponse2()
+	{
+		return npcResponses[1];
+	}
+	
+	public Text GetNpcResponse3()
+	{
+		return npcResponses[2];
+	}
+}
