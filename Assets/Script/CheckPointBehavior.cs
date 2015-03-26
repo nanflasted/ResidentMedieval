@@ -19,7 +19,7 @@ public class CheckPointBehavior : MonoBehaviour {
 	{
 		if (saving)
 		{
-			saver = new StreamWriter("save.dat");
+			saver = new StreamWriter("sav.dat");
 			saver.WriteLine("test saving");
 			saver.WriteLine(other.rigidbody.transform.localPosition);
 			saver.WriteLine ("testEnd");
