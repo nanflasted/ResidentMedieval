@@ -3,7 +3,6 @@ using System.Collections;
 using System.IO;
 
 public class CheckPointBehavior : MonoBehaviour {
-	public Player player;
 	private bool saving;
 	StreamWriter saver;
 	// Use this for initialization
@@ -16,25 +15,29 @@ public class CheckPointBehavior : MonoBehaviour {
 	
 	}
 
-	void Save()
+	void Save(Collider other)
 	{
 		if (saving)
 		{
 			saver = new StreamWriter("save.dat");
 			saver.WriteLine("test saving");
-			saver.WriteLine(player.transform.localPosition);
+			saver.WriteLine(other.rigidbody.transform.localPosition);
 			saver.WriteLine ("testEnd");
 			Debug.Log("Saved");
+			saver.Close ();
 		}
 	}
 
-	void OnCollisionEnter()
+	void OnTriggerEnter(Collider other)
 	{
-		saving = true;
-		Save();
+		if (other.tag == "Player")
+		{
+			saving = true;
+			Save(other);
+		}
 	}
 
-	void OnCollisionExit()
+	void OnTriggerExit(Collider other)
 	{
 		saving = false;
 	}
