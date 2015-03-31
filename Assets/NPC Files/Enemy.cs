@@ -32,8 +32,14 @@ public class Enemy : Unit {
 				num = i;
 			}
 		}
-		
-		//Move to the closest enemy
-		MoveTo (targets[num]);
+
+		// attack if close enough to target
+		if (shortestDist.magnitude < attackDist) {
+			weapon.Swing();
+		}
+		else {
+			//Move to the closest enemy
+			MoveTo (targets[num]);
+		}
 	}
 }
