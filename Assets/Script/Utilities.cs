@@ -3,7 +3,7 @@ using System.Collections;
 
 public static class Utilities {
 
-	public static Vector3 parseV3(string input)
+	public static Vector3 parseV3(string input)//parse a vecter3d from string in order to load stuff
 	{
 		Vector3 output = new Vector3(0f,0f,0f);
 		string[] split = new string[3];

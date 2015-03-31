@@ -17,7 +17,7 @@ public class CheckPointBehavior : MonoBehaviour {
 	
 	}
 
-	void Load()
+	void Load()//loads from last saved checkpoint
 	{
 		Vector3 pos;
 		if (File.Exists("sav.dat"))
