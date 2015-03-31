@@ -26,7 +26,7 @@ public class Weapon : MonoBehaviour {
 	public void OnTriggerEnter(Collider obj) {
 
 		// checks that the wielder and the person hit are not on the same team
-		if ((obj.gameObject.CompareTag("Ally") || obj.gameObject.CompareTag("Enemy"))
+		if ((obj.gameObject.CompareTag("Enemy") || obj.gameObject.CompareTag("Friendly") || obj.gameObject.CompareTag("Neutral"))
 		    && !obj.gameObject.CompareTag(wielder.gameObject.tag)) {
 
 			// damage the enemy

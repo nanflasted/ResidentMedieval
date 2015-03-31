@@ -12,7 +12,7 @@ public class Neutral : Unit {
 		Unit[] targets = new Unit[otherUnits.Length];
 		int counter = 0;
 		for (int i = 0; i < otherUnits.Length; i++) {
-			if (otherUnits[i].CompareTag("Enemy")) {
+			if (otherUnits[i].gameObject != null && otherUnits[i].CompareTag("Enemy")) {
 				targets[counter] = otherUnits[i];
 				counter++;
 			}
@@ -24,7 +24,7 @@ public class Neutral : Unit {
 		for (int i = 0; i < counter; i++) {
 			distToEnemy[i] = new Vector3(targets[i].transform.position.x - this.transform.position.x, 0, targets[i].transform.position.z - this.transform.position.z);
 		}
-		int num = 0;
+		int num = -1;
 		Vector3 shortestDist = new Vector3(10000,10000,10000);
 		for (int i = 0; i < counter; i++) {
 			if (distToEnemy[i].magnitude < shortestDist.magnitude) {
@@ -32,8 +32,11 @@ public class Neutral : Unit {
 				num = i;
 			}
 		}
-		//Create a fake unit in the opposite direction of the closest unit and run towards that fake unit
-		Vector3 opposite = new Vector3(this.transform.position.x - shortestDist.x * 2, 0, this.transform.position.z - shortestDist.z * 2);
-		agent.SetDestination(opposite);
+
+		if (num >= 0) {
+			//Create a fake unit in the opposite direction of the closest unit and run towards that fake unit
+			Vector3 opposite = new Vector3(this.transform.position.x - shortestDist.x * 2, 0, this.transform.position.z - shortestDist.z * 2);
+			agent.SetDestination(opposite);
+		}
 	}
 }
