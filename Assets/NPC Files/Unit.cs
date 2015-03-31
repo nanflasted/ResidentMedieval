@@ -9,6 +9,7 @@ public class Unit : MonoBehaviour {
 	public Weapon weapon;
 	public NavMeshAgent agent;
 	public float attackDist;
+	public UnitManager unitManager;
 	
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();	//Give it access to the NavMesh

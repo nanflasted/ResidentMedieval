@@ -4,16 +4,14 @@ using System.Collections;
 //Neutrals run away from enemies
 
 public class Neutral : Unit {
-
-	public Unit[] otherUnits;	//Other units in the scene
 	
 	void Update () {
 		//Check for units that are enemies and add them to the array of units this unit cares about (filters out other neutrals and friendlies)
-		Unit[] targets = new Unit[otherUnits.Length];
+		Unit[] targets = new Unit[unitManager.units.Length];
 		int counter = 0;
-		for (int i = 0; i < otherUnits.Length; i++) {
-			if (otherUnits[i].gameObject != null && otherUnits[i].CompareTag("Enemy")) {
-				targets[counter] = otherUnits[i];
+		for (int i = 0; i < unitManager.units.Length; i++) {
+			if (unitManager.units[i].gameObject != null && unitManager.units[i].CompareTag("Enemy")) {
+				targets[counter] = unitManager.units[i];
 				counter++;
 			}
 		}

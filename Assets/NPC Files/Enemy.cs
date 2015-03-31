@@ -4,16 +4,14 @@ using System.Collections;
 //Enemies run towards Neutrals and Friendlies
 
 public class Enemy : Unit {
-
-	public Unit[] otherUnits;	//Other units in the scene
 	
 	void Update () {
 		//Check for units that are friendlies or neutrals and add them to the array of units this unit cares about (filters out other enemies)
-		Unit[] targets = new Unit[otherUnits.Length];
+		Unit[] targets = new Unit[unitManager.units.Length];
 		int counter = 0;
-		for (int i = 0; i < otherUnits.Length; i++) {
-			if (otherUnits[i] != null && (otherUnits[i].CompareTag("Friendly") || otherUnits[i].CompareTag("Neutral"))) {
-				targets[counter] = otherUnits[i];
+		for (int i = 0; i < unitManager.units.Length; i++) {
+			if (unitManager.units[i] != null && (unitManager.units[i].CompareTag("Friendly") || unitManager.units[i].CompareTag("Neutral"))) {
+				targets[counter] = unitManager.units[i];
 				counter++;
 			}
 		}
