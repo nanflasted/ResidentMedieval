@@ -9,10 +9,15 @@ public class Unit : MonoBehaviour {
 	public Weapon weapon;
 	public NavMeshAgent agent;
 	public float attackDist;
+	public float attackAngle;
 	public UnitManager unitManager;
 	
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();	//Give it access to the NavMesh
+	}
+
+	public bool InRange(Vector3 target) {
+		return (target.magnitude < attackDist) && (Vector3.Angle(target, this.transform.forward) < attackAngle);
 	}
 	
 	public void MoveTo(Unit target) {

@@ -32,7 +32,7 @@ public class Enemy : Unit {
 		}
 
 		// attack if close enough to target
-		if (shortestDist.magnitude < attackDist) {
+		if (InRange(shortestDist)) {
 			weapon.Swing();
 		}
 		else if (num >= 0) {
