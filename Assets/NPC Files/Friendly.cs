@@ -34,10 +34,16 @@ public class Friendly : Unit {
 		// attack if close enough to target
 		if (InRange(shortestDist)) {
 			weapon.Swing();
+			agent.Stop();
 		}
 		else if (num >= 0) {
-			//Move to the closest enemy
-			MoveTo (targets[num]);
+			//Move to the closest enemy if further than attackDist
+			if (shortestDist.magnitude < attackDist) {
+				agent.Stop();
+			} else {
+				agent.Resume();
+				MoveTo (targets[num]);
+			}
 		}
 	}
 }
