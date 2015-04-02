@@ -39783,6 +39783,7 @@ GameObject:
   - 114: {fileID: 1228375968}
   - 114: {fileID: 1228375972}
   - 54: {fileID: 1228375973}
+  - 208: {fileID: 1228375974}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -39916,6 +39917,17 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!208 &1228375974
+NavMeshObstacle:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1228375967}
+  m_Enabled: 1
+  m_Radius: 1.75
+  m_Height: 2
+  m_MoveThreshold: 0
+  m_Carve: 0
 --- !u!1 &1228816434
 GameObject:
   m_ObjectHideFlags: 0

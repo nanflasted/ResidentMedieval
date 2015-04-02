@@ -39,6 +39,8 @@ public class Friendly : Unit {
 		else if (num >= 0) {
 			agent.Resume();
 			MoveTo (targets[num]);
+		} else {
+			agent.Stop();
 		}
 	}
 }
