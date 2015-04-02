@@ -42,5 +42,8 @@ public class Friendly : Unit {
 		} else {
 			agent.Stop();
 		}
+		else {
+			agent.Stop();
+		}
 	}
 }
