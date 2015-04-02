@@ -74,9 +74,8 @@ MonoBehaviour:
   weapon: {fileID: 0}
   agent: {fileID: 0}
   attackDist: 0
-  otherUnits:
-  - {fileID: 0}
-  - {fileID: 0}
+  attackAngle: 0
+  unitManager: {fileID: 0}
 --- !u!136 &13600042
 CapsuleCollider:
   m_ObjectHideFlags: 1
