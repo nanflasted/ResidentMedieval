@@ -7,10 +7,10 @@ public class Enemy : Unit {
 	
 	void Update () {
 		//Check for units that are friendlies or neutrals and add them to the array of units this unit cares about (filters out other enemies)
-		Unit[] targets = new Unit[unitManager.units.Length];
+		Unit[] targets = new Unit[unitManager.units.Count];
 		int counter = 0;
-		for (int i = 0; i < unitManager.units.Length; i++) {
-			if (unitManager.units[i] != null && (unitManager.units[i].CompareTag("Friendly") || unitManager.units[i].CompareTag("Neutral"))) {
+		for (int i = 0; i < unitManager.units.Count; i++) {
+			if (unitManager.units[i].gameObject != null && (unitManager.units[i].CompareTag("Friendly") || unitManager.units[i].CompareTag("Neutral"))) {
 				targets[counter] = unitManager.units[i];
 				counter++;
 			}

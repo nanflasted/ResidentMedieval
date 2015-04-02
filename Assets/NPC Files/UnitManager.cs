@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
-using System.Collections;
+using System.Collections.Generic;
 
 public class UnitManager : MonoBehaviour {
-	public Unit[] units;
+	public List<Unit> units;
 }

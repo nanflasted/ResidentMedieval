@@ -8,8 +8,8 @@ public class Unit : MonoBehaviour {
 	public float health;
 	public Weapon weapon;
 	public NavMeshAgent agent;
-	public float attackDist;
-	public float attackAngle;
+	public float attackDist; // minimum distance at which the unit will start attacking
+	public float attackAngle; // minimum angle from the opponent at which the unit will start swinging
 	public UnitManager unitManager;
 	
 	void Start () {
@@ -17,7 +17,7 @@ public class Unit : MonoBehaviour {
 	}
 
 	public bool InRange(Vector3 target) {
-		return (target.magnitude < attackDist) && (Vector3.Angle(target, this.transform.forward) < attackAngle);
+		return (target.magnitude <= attackDist) && (Vector3.Angle(target, this.transform.forward) <= attackAngle);
 	}
 	
 	public void MoveTo(Unit target) {
@@ -41,6 +41,7 @@ public class Unit : MonoBehaviour {
 
 	// kill the unit; later this should incorporate a death animation
 	void Die() {
-		Destroy(gameObject);
+		this.gameObject.SetActive(false);
+		unitManager.units.Remove(this);
 	}
 }
