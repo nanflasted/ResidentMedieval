@@ -25,15 +25,15 @@ public class CheckPointBehavior : MonoBehaviour {
 			loader = new StreamReader("sav.dat");
 			loader.ReadLine();
 			pos = Utilities.parseV3(loader.ReadLine());
-			//pos.z = 0f;
+			pos.y = 0f;
 			loader.ReadLine();
 			loader.Close ();
 		}
 		else
 		{
-			pos = new Vector3(0f,10.45f,0f);
+			pos = new Vector3(0f,0f,0f);
 		}
-		GameObject.Find("Player").transform.Translate(pos);
+		GameObject.Find("Player").rigidbody.transform.Translate(pos);
 	}
 
 	void Save(Collider other)
