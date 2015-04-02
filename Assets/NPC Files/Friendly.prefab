@@ -60,7 +60,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 172610}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -4.39666367, y: 9.00219727, z: 35.7520828}
+  m_LocalPosition: {x: -12.1790733, y: 9.00219727, z: 18.6595612}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 431194}
@@ -176,7 +176,7 @@ MonoBehaviour:
   health: 100
   weapon: {fileID: 11431194}
   agent: {fileID: 0}
-  attackDist: 1.5
+  attackDist: 2
   attackAngle: 10
   unitManager: {fileID: 0}
 --- !u!114 &11431194

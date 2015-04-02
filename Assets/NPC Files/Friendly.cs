@@ -37,13 +37,8 @@ public class Friendly : Unit {
 			agent.Stop();
 		}
 		else if (num >= 0) {
-			//Move to the closest enemy if further than attackDist
-			if (shortestDist.magnitude < attackDist) {
-				agent.Stop();
-			} else {
-				agent.Resume();
-				MoveTo (targets[num]);
-			}
+			agent.Resume();
+			MoveTo (targets[num]);
 		}
 	}
 }
