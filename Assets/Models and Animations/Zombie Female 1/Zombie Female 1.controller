@@ -20,18 +20,98 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
---- !u!1102 &110266140
+--- !u!1101 &110126544
+Transition:
+  serializedVersion: 2
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_SrcState: {fileID: 110245504}
+  m_DstState: {fileID: 110280600}
+  m_TransitionDuration: .0409836024
+  m_TransitionOffset: 0
+  m_Conditions:
+  - m_ConditionMode: 5
+    m_ConditionEvent: 
+    m_EventTreshold: 0
+    m_ExitTime: .959016383
+  m_Atomic: 1
+  m_Solo: 0
+  m_Mute: 0
+  m_CanTransitionToSelf: 0
+--- !u!1102 &110205532
 State:
   m_ObjectHideFlags: 3
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: Zombie Reaction HIt
+  m_Name: Zombie Transition 2
   m_Speed: 1
   m_CycleOffset: 0
   m_Motions:
-  - {fileID: 7400000, guid: 6af3a3d22795b475d8e05cbe2450ad06, type: 3}
+  - {fileID: 7400000, guid: 5efcfd757474d4ed1b04773f7aa9a36f, type: 3}
   m_ParentStateMachine: {fileID: 110722796}
-  m_Position: {x: 128, y: -46, z: 0}
+  m_Position: {x: 346, y: 152, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110225214
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: zombie idle
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 97b52a72b99f4487a9f6ed56d4d312b9, type: 3}
+  m_ParentStateMachine: {fileID: 110722796}
+  m_Position: {x: -84, y: 84, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110245504
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Zombie Idle 1
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: d3af1284494b04114aabb03049c0cac6, type: 3}
+  m_ParentStateMachine: {fileID: 110722796}
+  m_Position: {x: 24, y: -72, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110248260
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Zombie Transition
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: 022c8fcebfcaa4e7aa31f54c5df8ea9d, type: 3}
+  m_ParentStateMachine: {fileID: 110722796}
+  m_Position: {x: 79, y: 209, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Tag: 
+--- !u!1102 &110280600
+State:
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Zombie Idle 2
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Motions:
+  - {fileID: 7400000, guid: a2a8bd4e4046443eaafae8ad2ca8b616, type: 3}
+  m_ParentStateMachine: {fileID: 110722796}
+  m_Position: {x: 24, y: -144, z: 0}
   m_IKOnFeet: 0
   m_Mirror: 0
   m_Tag: 
@@ -42,12 +122,32 @@ StateMachine:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: Base Layer
-  m_DefaultState: {fileID: 110266140}
+  m_DefaultState: {fileID: 110245504}
   m_States:
-  - {fileID: 110266140}
+  - {fileID: 110245504}
+  - {fileID: 110280600}
+  - {fileID: 110225214}
+  - {fileID: 110248260}
+  - {fileID: 110205532}
   m_ChildStateMachine: []
   m_ChildStateMachinePosition: []
-  m_OrderedTransitions: {}
+  m_OrderedTransitions:
+    data:
+      first: {fileID: 110205532}
+      second: []
+    data:
+      first: {fileID: 110248260}
+      second: []
+    data:
+      first: {fileID: 110225214}
+      second: []
+    data:
+      first: {fileID: 110280600}
+      second: []
+    data:
+      first: {fileID: 110245504}
+      second:
+      - {fileID: 110126544}
   m_MotionSetCount: 1
   m_AnyStatePosition: {x: 50, y: 20, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
