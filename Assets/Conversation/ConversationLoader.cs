@@ -33,30 +33,14 @@ public class ConversationLoader : MonoBehaviour {
 		nextNPCResponse = 2;
 	}	
 	
-	// called when Response 1 is clicked
-	public void Response1() {
-		Debug.Log ("one");
-		LoadNewResponses();
-	}
-	
-	// called when Response 2 is clicked
-	public void Response2() {
-		Debug.Log("two");
-		LoadNewResponses();
-	}
-	
-	// called when Response 3 is clicked
-	public void Response3() {
-		Debug.Log("three");
-		LoadNewResponses();
-	}
-	
 	// called when Leave Conversation is clicked
 	public void Leave() {
 		Destroy(gameObject);
 	}
 	
-	private void LoadNewResponses() {
+	// called when a response button is clicked
+	public void LoadNewResponses() {
+		Debug.Log ("clicked");
 		currentNode = conversation.AdvanceConversation();
 		npcResponse.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetNpcResponses(nextNPCResponse++).ToString ();
 		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(nextPlayerReponse++).ToString ();
