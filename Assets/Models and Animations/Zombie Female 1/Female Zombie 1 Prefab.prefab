@@ -2114,7 +2114,7 @@ Transform:
   m_RootOrder: 0
 --- !u!54 &5488662
 Rigidbody:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114438}
@@ -2129,7 +2129,7 @@ Rigidbody:
   m_CollisionDetection: 0
 --- !u!64 &6456402
 MeshCollider:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114438}
@@ -2142,7 +2142,7 @@ MeshCollider:
   m_Mesh: {fileID: 4300004, guid: e6548702964ee403b8e68ad5da41486b, type: 3}
 --- !u!64 &6456404
 MeshCollider:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114438}
@@ -2155,7 +2155,7 @@ MeshCollider:
   m_Mesh: {fileID: 4300012, guid: e6548702964ee403b8e68ad5da41486b, type: 3}
 --- !u!64 &6456406
 MeshCollider:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114438}
@@ -2168,7 +2168,7 @@ MeshCollider:
   m_Mesh: {fileID: 4300008, guid: e6548702964ee403b8e68ad5da41486b, type: 3}
 --- !u!64 &6456408
 MeshCollider:
-  m_ObjectHideFlags: 1
+  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114438}
