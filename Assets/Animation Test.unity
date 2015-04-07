@@ -534,6 +534,14 @@ Prefab:
       propertyPath: m_RootOrder
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5488662, guid: b031cc14875534e32a6f12c3142b6bfc, type: 2}
+      propertyPath: m_Mass
+      value: 1.00000001e-07
+      objectReference: {fileID: 0}
+    - target: {fileID: 5488662, guid: b031cc14875534e32a6f12c3142b6bfc, type: 2}
+      propertyPath: m_Constraints
+      value: 112
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: b031cc14875534e32a6f12c3142b6bfc, type: 2}
   m_RootGameObject: {fileID: 1107822545}
@@ -1396,7 +1404,7 @@ Rigidbody:
   m_PrefabInternal: {fileID: 514780749}
   m_GameObject: {fileID: 1107822545}
   serializedVersion: 2
-  m_Mass: 60
+  m_Mass: 1.00000001e-07
   m_Drag: 0
   m_AngularDrag: .0500000007
   m_UseGravity: 0
