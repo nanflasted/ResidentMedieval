@@ -17,5 +17,9 @@ public class Player : Unit {
 				counter++;
 			}
 		}
+
+		if (Input.GetMouseButtonDown(0)) {
+			weapon.Swing();
+		}
 	}
 }
