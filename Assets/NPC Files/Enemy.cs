@@ -10,7 +10,7 @@ public class Enemy : Unit {
 		Unit[] targets = new Unit[unitManager.units.Count];
 		int counter = 0;
 		for (int i = 0; i < unitManager.units.Count; i++) {
-			if (unitManager.units[i].gameObject != null && (unitManager.units[i].CompareTag("Friendly") || unitManager.units[i].CompareTag("Neutral"))) {
+			if (unitManager.units[i].gameObject != null && (unitManager.units[i].CompareTag("Friendly") || unitManager.units[i].CompareTag("Neutral")) || unitManager.units[i].CompareTag("Friendly")) {
 				targets[counter] = unitManager.units[i];
 				counter++;
 			}
