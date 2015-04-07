@@ -29,8 +29,10 @@ public class Weapon : MonoBehaviour {
 		if ((obj.gameObject.CompareTag("Enemy") || obj.gameObject.CompareTag("Friendly") || obj.gameObject.CompareTag("Neutral"))
 		    && !obj.gameObject.CompareTag(wielder.gameObject.tag)) {
 
-			// damage the enemy
-			obj.GetComponent<Unit>().DoDamage(damage);
+			if ((wielder is Player && obj.gameObject.CompareTag("Enemy")) || !(wielder is Player)) {
+				// damage the enemy
+				obj.GetComponent<Unit>().DoDamage(damage);
+			}
 		}
 	}
 }
