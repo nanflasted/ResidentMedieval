@@ -18,7 +18,8 @@ public class Player : Unit {
 			}
 		}
 
-		if (Input.GetMouseButtonDown(0)) {
+		if (Input.GetButtonDown("Fire1")) {
+			Debug.Log("Clicked");
 			weapon.Swing();
 		}
 	}
