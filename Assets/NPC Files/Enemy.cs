@@ -10,7 +10,7 @@ public class Enemy : Unit {
 		Unit[] targets = new Unit[unitManager.units.Count];
 		int counter = 0;
 		for (int i = 0; i < unitManager.units.Count; i++) {
-			if (unitManager.units[i].gameObject != null && (unitManager.units[i].CompareTag("Friendly") || unitManager.units[i].CompareTag("Neutral")) || unitManager.units[i].CompareTag("Friendly")) {
+			if (unitManager.units[i].gameObject != null && (unitManager.units[i].CompareTag("Friendly") || unitManager.units[i].CompareTag("Neutral")) || unitManager.units[i].CompareTag("Player")) {
 				targets[counter] = unitManager.units[i];
 				counter++;
 			}
@@ -30,13 +30,12 @@ public class Enemy : Unit {
 				num = i;
 			}
 		}
-
+		
 		// attack if close enough to target
 		if (InRange(shortestDist)) {
 			weapon.Swing();
 			agent.Stop();
-		}
-		else if (num >= 0) {
+		} else if (num >= 0) {
 			//Move to the closest enemy if further than attackDist
 			agent.Resume();
 			MoveTo (targets[num]);

@@ -2152,7 +2152,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!23 &64266681
 Renderer:
   m_ObjectHideFlags: 0
@@ -11729,7 +11729,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &349732375
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11745,7 +11745,7 @@ MonoBehaviour:
   health: 100
   weapon: {fileID: 207392045}
   agent: {fileID: 0}
-  attackDist: 2
+  attackDist: 3
   attackAngle: 10
   unitManager: {fileID: 1129209921}
 --- !u!23 &349732376
@@ -14645,7 +14645,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!23 &447227325
 Renderer:
   m_ObjectHideFlags: 0
@@ -17216,7 +17216,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!23 &486384472
 Renderer:
   m_ObjectHideFlags: 0
@@ -23208,7 +23208,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &663714415
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23718,7 +23718,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &683204589
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -23734,7 +23734,7 @@ MonoBehaviour:
   health: 100
   weapon: {fileID: 2088158909}
   agent: {fileID: 0}
-  attackDist: 2
+  attackDist: 3
   attackAngle: 10
   unitManager: {fileID: 1129209921}
 --- !u!23 &683204590
@@ -35788,7 +35788,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!23 &1096925905
 Renderer:
   m_ObjectHideFlags: 0
@@ -36073,7 +36073,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &1103288493
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36089,7 +36089,7 @@ MonoBehaviour:
   health: 100
   weapon: {fileID: 756879256}
   agent: {fileID: 0}
-  attackDist: 2
+  attackDist: 3
   attackAngle: 10
   unitManager: {fileID: 1129209921}
 --- !u!23 &1103288494
@@ -39988,7 +39988,7 @@ CharacterController:
   m_GameObject: {fileID: 1228375967}
   serializedVersion: 2
   m_Height: 2
-  m_Radius: .550000012
+  m_Radius: .5
   m_SlopeLimit: 45
   m_StepOffset: .300000012
   m_SkinWidth: .0799999982
@@ -46049,7 +46049,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &1391300963
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50845,7 +50845,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 1
 --- !u!114 &1533063659
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -50861,7 +50861,7 @@ MonoBehaviour:
   health: 100
   weapon: {fileID: 93482769}
   agent: {fileID: 0}
-  attackDist: 2
+  attackDist: 3
   attackAngle: 10
   unitManager: {fileID: 1129209921}
 --- !u!23 &1533063660
@@ -55240,7 +55240,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 4
+  m_ObstacleAvoidanceType: 1
 --- !u!23 &1650915747
 Renderer:
   m_ObjectHideFlags: 0

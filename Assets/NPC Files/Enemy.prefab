@@ -189,7 +189,7 @@ MonoBehaviour:
   health: 100
   weapon: {fileID: 11429454}
   agent: {fileID: 0}
-  attackDist: 2
+  attackDist: 3
   attackAngle: 10
   unitManager: {fileID: 0}
 --- !u!136 &13642026
@@ -224,7 +224,7 @@ NavMeshAgent:
   m_Height: 2
   m_BaseOffset: 1
   m_WalkableMask: 4294967295
-  m_ObstacleAvoidanceType: 0
+  m_ObstacleAvoidanceType: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
