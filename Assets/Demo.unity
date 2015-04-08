@@ -13303,12 +13303,12 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerResponses:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 906431045}
+  - {fileID: 906431045}
+  - {fileID: 906431045}
+  - {fileID: 1361507978}
+  - {fileID: 2019059178}
+  - {fileID: 985362415}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -13319,15 +13319,15 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   npcResponses:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
+  - {fileID: 819155994}
+  - {fileID: 819155994}
+  - {fileID: 819155994}
+  - {fileID: 1303413691}
+  - {fileID: 1303413691}
+  - {fileID: 1303413691}
+  - {fileID: 1375156840}
+  - {fileID: 2044438694}
+  - {fileID: 1549766548}
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
@@ -29416,7 +29416,7 @@ GameObject:
   - 222: {fileID: 819155995}
   - 114: {fileID: 819155994}
   m_Layer: 5
-  m_Name: Text
+  m_Name: General Line 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29447,7 +29447,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "You there! Yes you, what\u2019s your name?\r"
 --- !u!222 &819155995
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31472,7 +31472,7 @@ GameObject:
   - 222: {fileID: 906431046}
   - 114: {fileID: 906431045}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -31520,7 +31520,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: (look around) M-me? My name is Gristle McThornbody
 --- !u!222 &906431046
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -34019,7 +34019,7 @@ GameObject:
   - 222: {fileID: 985362416}
   - 114: {fileID: 985362415}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 2-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -34067,7 +34067,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "Nonononono I can\u2019t, I can\u2019t help you. I\u2019m just a peasant,
+    what could I possibly do?"
 --- !u!222 &985362416
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -45413,7 +45414,7 @@ GameObject:
   - 222: {fileID: 1303413692}
   - 114: {fileID: 1303413691}
   m_Layer: 5
-  m_Name: Text
+  m_Name: General Line 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -45461,7 +45462,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: My soldiers are struggling with these monsters, and you just took on 27
+    of them with a d20 and a bowler hat. I need someone like you to help with this
+    fight!s
 --- !u!222 &1303413692
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -47810,7 +47813,7 @@ GameObject:
   - 222: {fileID: 1361507979}
   - 114: {fileID: 1361507978}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -47858,7 +47861,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: How could I help?
 --- !u!222 &1361507979
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -48423,7 +48426,7 @@ GameObject:
   - 222: {fileID: 1375156841}
   - 114: {fileID: 1375156840}
   m_Layer: 5
-  m_Name: Text
+  m_Name: General Line 3-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -48471,7 +48474,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "I\u2019ve seen you fight, that strength would truly be inspirational to
+    others especially since you are a regular person. With the king dead and more
+    and more soldiers dying everyone needs to be more involved and with the kingdom
+    and do more than just their part. I need you to help me rally your neighbors and
+    our citizens and help keep the peace for now, help anyone that you can and make
+    sure everything is alright."
 --- !u!222 &1375156841
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -54599,7 +54607,7 @@ GameObject:
   - 222: {fileID: 1549766549}
   - 114: {fileID: 1549766548}
   m_Layer: 5
-  m_Name: Text
+  m_Name: General Line 3-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -54647,7 +54655,10 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "That\u2019s why I need you! I\u2019ve seen you fight, that strength would
+    truly be inspirational to others especially since you are a regular person. With
+    the king dead and more and more soldiers dying everyone needs to be more involved
+    and with the kingdom and do more than just their part."
 --- !u!222 &1549766549
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -70681,7 +70692,7 @@ GameObject:
   - 222: {fileID: 2019059179}
   - 114: {fileID: 2019059178}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 2-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -70729,7 +70740,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Uhh what do you mean?
 --- !u!222 &2019059179
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -71467,7 +71478,7 @@ GameObject:
   - 222: {fileID: 2044438695}
   - 114: {fileID: 2044438694}
   m_Layer: 5
-  m_Name: Text
+  m_Name: General Line 3-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71515,7 +71526,12 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "I\u2019ve seen you fight, that strength would truly be inspirational to
+    others especially since you are a regular person. With the king dead and more
+    and more soldiers dying everyone needs to be more involved and with the kingdom
+    and do more than just their part. I need you to help me rally your neighbors and
+    our citizens and help keep the peace for now, help anyone that you can and make
+    sure everything is alright."
 --- !u!222 &2044438695
 CanvasRenderer:
   m_ObjectHideFlags: 0
