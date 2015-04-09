@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 1aa7e520a54454144b2a97c5b9382426
+guid: ed0bdba0fc04a4405831262510fd5991
 ModelImporter:
   serializedVersion: 16
   fileIDToRecycleName:
@@ -139,7 +139,7 @@ ModelImporter:
     400130: mixamorig:Spine1
     400132: mixamorig:Spine2
     400134: //RootNode
-    7400000: Reaction Hit
+    7400000: S&S Run Back
     9500000: //RootNode
   materials:
     importMaterials: 1
@@ -158,19 +158,19 @@ ModelImporter:
     extraExposedTransformPaths: []
     clipAnimations:
     - serializedVersion: 16
-      name: Reaction Hit
+      name: S&S Run Back
       takeName: mixamo.com
       firstFrame: 0
-      lastFrame: 21
+      lastFrame: 16
       wrapMode: 0
-      orientationOffsetY: 0
+      orientationOffsetY: -28.3999996
       level: 0
       cycleOffset: 0
       loop: 0
-      loopTime: 0
-      loopBlend: 0
-      loopBlendOrientation: 0
-      loopBlendPositionY: 0
+      loopTime: 1
+      loopBlend: 1
+      loopBlendOrientation: 1
+      loopBlendPositionY: 1
       loopBlendPositionXZ: 0
       keepOriginalOrientation: 0
       keepOriginalPositionY: 1
