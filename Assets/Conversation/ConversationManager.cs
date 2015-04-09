@@ -19,8 +19,9 @@ public class ConversationManager : MonoBehaviour {
 		Text[] playerNodeResponses;
 		Text[] npcNodeResponses;
 		
-		for(int i = 0; i < playerResponses.Length; i += 3)
+		for(int i = 0; i < playerResponses.Length ; i += 3)
 		{
+			Debug.Log (i);
 			playerNodeResponses = new Text[3] {playerResponses[i], playerResponses[i + 1], playerResponses[i + 2]};
 			npcNodeResponses = new Text[3] {npcResponses[i], npcResponses[i + 1], npcResponses[i + 2]};
 			list.Add(new ConversationNode(playerNodeResponses, npcNodeResponses));

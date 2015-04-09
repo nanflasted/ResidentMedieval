@@ -19,17 +19,17 @@ public class ConversationLoader : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// get the conversation manager, which holds the conversation, from the player
-		GameObject player = GameObject.Find("player");
+		GameObject player = GameObject.Find("Player");
 		conversation = player.GetComponent<ConversationManager>();
 		
 		// fill in the initial reponses for the player and npc
 		currentNode = conversation.AdvanceConversation();
-		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).ToString ();
-		response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(2).ToString ();
-		response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(3).ToString ();
+		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
+		response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(2).GetComponent<Text>().text;
+		response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(3).GetComponent<Text>().text;
 		nextPlayerReponse = 4;
 		
-		npcResponse.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetNpcResponses(1).ToString ();
+		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(1).GetComponent<Text>().text;
 		nextNPCResponse = 2;
 	}	
 	
@@ -40,12 +40,11 @@ public class ConversationLoader : MonoBehaviour {
 	
 	// called when a response button is clicked
 	public void LoadNewResponses() {
-		Debug.Log ("clicked");
 		currentNode = conversation.AdvanceConversation();
-		npcResponse.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetNpcResponses(nextNPCResponse++).ToString ();
-		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(nextPlayerReponse++).ToString ();
-		response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(nextPlayerReponse++).ToString ();
-		response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(nextPlayerReponse++).ToString ();
+		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(nextNPCResponse++).GetComponent<Text>().text;
+		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
+		response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(2).GetComponent<Text>().text;
+		response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(3).GetComponent<Text>().text;
 	}
 	
 }
