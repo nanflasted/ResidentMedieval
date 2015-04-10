@@ -23,14 +23,9 @@ public class ConversationLoader : MonoBehaviour {
 		conversation = player.GetComponent<ConversationManager>();
 		
 		// fill in the initial reponses for the player and npc
-		currentNode = conversation.AdvanceConversation();
-		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
-		response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(2).GetComponent<Text>().text;
-		response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(3).GetComponent<Text>().text;
-		nextPlayerReponse = 4;
+		LoadNewResponses(1);
 		
 		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(1).GetComponent<Text>().text;
-		nextNPCResponse = 2;
 	}	
 	
 	// called when Leave Conversation is clicked
@@ -38,13 +33,35 @@ public class ConversationLoader : MonoBehaviour {
 		Destroy(gameObject);
 	}
 	
-	// called when a response button is clicked
-	public void LoadNewResponses() {
-		currentNode = conversation.AdvanceConversation();
-		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(nextNPCResponse++).GetComponent<Text>().text;
-		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
-		response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(2).GetComponent<Text>().text;
-		response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(3).GetComponent<Text>().text;
+	public void Response1() {
+		LoadNewResponses(1);
 	}
 	
+	public void Response2() {
+		LoadNewResponses(2);
+	}
+	
+	public void Response3() {
+		LoadNewResponses(3);
+	}
+	
+	// called when a response button is clicked
+	private void LoadNewResponses(int npcResponseNum) {
+		currentNode = conversation.AdvanceConversation();
+		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text;
+		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
+		if (response2.transform.FindChild("Text") != null) {
+			response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(2).GetComponent<Text>().text;
+		}
+		else {
+			response2.SetActive(false);
+		}
+		if (response3.transform.FindChild("Text") != null) {
+			response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(3).GetComponent<Text>().text;
+		}
+		else {
+			response3.SetActive(false);
+		}
+	}
+		
 }
