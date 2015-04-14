@@ -1,5 +1,50 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &102156
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 402156}
+  m_Layer: 0
+  m_Name: Right Hand Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &116382
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 416382}
+  m_Layer: 0
+  m_Name: Left Forearm Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &143158
+GameObject:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 443158}
+  m_Layer: 0
+  m_Name: Left Hip Location
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &162682
 GameObject:
   m_ObjectHideFlags: 1
@@ -762,6 +807,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 462782}
   - 95: {fileID: 9562682}
+  - 114: {fileID: 11431588}
   m_Layer: 0
   m_Name: General Prefab
   m_TagString: Untagged
@@ -1117,6 +1163,42 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!4 &402156
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 102156}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 462804}
+  m_RootOrder: 5
+--- !u!4 &416382
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 116382}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -.0489999987, y: .159999996, z: -0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 462722}
+  m_RootOrder: 1
+--- !u!4 &443158
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 143158}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .138999999, y: -0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 462730}
+  m_RootOrder: 1
 --- !u!4 &462682
 Transform:
   m_ObjectHideFlags: 1
@@ -1386,6 +1468,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 462740}
+  - {fileID: 416382}
   m_Father: {fileID: 462764}
   m_RootOrder: 0
 --- !u!4 &462724
@@ -1437,6 +1520,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 462744}
+  - {fileID: 443158}
   m_Father: {fileID: 462712}
   m_RootOrder: 0
 --- !u!4 &462732
@@ -1923,6 +2007,7 @@ Transform:
   - {fileID: 462806}
   - {fileID: 462698}
   - {fileID: 462714}
+  - {fileID: 402156}
   m_Father: {fileID: 462700}
   m_RootOrder: 0
 --- !u!4 &462806
@@ -2087,12 +2172,28 @@ Animator:
   m_GameObject: {fileID: 162782}
   m_Enabled: 1
   m_Avatar: {fileID: 9000000, guid: 1520cba23082944cbafb1d47c36c9eb8, type: 3}
-  m_Controller: {fileID: 9100000, guid: 99054c2fa15ac46b7b1f23374db119b4, type: 2}
+  m_Controller: {fileID: 9100000, guid: f80d59d183452470294458c24e26dd2e, type: 2}
   m_CullingMode: 1
   m_UpdateMode: 0
   m_ApplyRootMotion: 1
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11431588
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 162782}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 83c21da27dcce4f9d9b1226ef7b3a8c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  rightHand: {fileID: 102156}
+  leftForearm: {fileID: 116382}
+  leftHip: {fileID: 143158}
+  weapon: {fileID: 0}
+  shield: {fileID: 0}
 --- !u!137 &13762682
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

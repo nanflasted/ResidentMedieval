@@ -3,7 +3,11 @@ using System.Collections;
 
 //Friendlies run towards enemies
 
+
+
 public class Friendly : Unit {
+
+	private bool isSwordDrawn;
 
 	void Update () {
 		//Check for units that are enemies and add them to the array of units this unit cares about (filters out other neutrals and friendlies)
@@ -42,5 +46,17 @@ public class Friendly : Unit {
 		} else {
 			agent.Stop();
 		}
+		
+		
+		
+	}
+	
+	
+	public void DrawSword(){
+		
+	}
+	
+	public void SheathSword(){
+		
 	}
 }
