@@ -14,9 +14,11 @@ public class Unit : MonoBehaviour {
 	public float attackDist; // minimum distance at which the unit will start attacking
 	public float attackAngle; // minimum angle from the opponent at which the unit will start swinging
 	public UnitManager unitManager;
+	public Animator anim;
 	
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();	//Give it access to the NavMesh
+		anim = GetComponent<Animator>();
 	}
 
 	public bool InRange(Vector3 target) {

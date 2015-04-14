@@ -41,7 +41,6 @@ public class Friendly : Unit {
 			agent.Stop();
 		}
 		else if (num >= 0) {
-			agent.Resume();
 			MoveTo (targets[num]);
 		} else {
 			agent.Stop();

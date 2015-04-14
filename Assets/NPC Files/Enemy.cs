@@ -32,13 +32,14 @@ public class Enemy : Unit {
 		}
 		
 		// attack if close enough to target
+		Debug.Log (InRange(shortestDist));
 		if (InRange(shortestDist)) {
-			weapon.Swing();
+			//weapon.Swing();
 			agent.Stop();
 		} else if (num >= 0) {
 			//Move to the closest enemy if further than attackDist
-			agent.Resume();
 			MoveTo (targets[num]);
+			anim.SetFloat("Speed", agent.speed);
 		}
 		else {
 			agent.Stop();
