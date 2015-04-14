@@ -4336,8 +4336,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 182756563}
   m_LocalRotation: {x: -.00289017218, y: .0105358455, z: .0286368597, w: .999530256}
-  m_LocalPosition: {x: 379.570007, y: 1.60000038, z: 335.709991}
-  m_LocalScale: {x: .450063467, y: 10.1527348, z: 4.08681011}
+  m_LocalPosition: {x: 379.570007, y: 1.60000002, z: 335.709991}
+  m_LocalScale: {x: .450063467, y: 16.7940063, z: 5.88721943}
   m_Children: []
   m_Father: {fileID: 211151934}
   m_RootOrder: 26
@@ -14785,7 +14785,8 @@ Transform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 367.049988, y: 1.26999998, z: 374.549988}
   m_LocalScale: {x: 2.39962339, y: 4.59189034, z: .289579153}
-  m_Children: []
+  m_Children:
+  - {fileID: 1607667502}
   m_Father: {fileID: 1688526809}
   m_RootOrder: 4
 --- !u!114 &705547398
@@ -27048,6 +27049,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   fadeOutTexture: {fileID: 2800000, guid: 8e8b3272e22f347f99c01a81bb04f86b, type: 3}
   fadeSpeed: .800000012
+  target: {fileID: 0}
 --- !u!4 &1254766197
 Transform:
   m_ObjectHideFlags: 0
@@ -33825,6 +33827,33 @@ Transform:
   m_Children: []
   m_Father: {fileID: 211151934}
   m_RootOrder: 4
+--- !u!1 &1607667501
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1607667502}
+  m_Layer: 0
+  m_Name: GameObject
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1607667502
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1607667501}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 7, y: 9.64999962, z: 7}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 705547397}
+  m_RootOrder: 0
 --- !u!1 &1607838903
 GameObject:
   m_ObjectHideFlags: 0

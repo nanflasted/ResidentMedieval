@@ -5,10 +5,15 @@ public class Fading : MonoBehaviour {
 
 	public Texture fadeOutTexture;
 	public float fadeSpeed = 0.8f;
+	public Transform target;
 	
 	private int drawDepth = -1000;
 	private float alpha = 1.0f;
 	private int fadeDir = -1;
+	
+	void Start () {
+		DontDestroyOnLoad (transform.gameObject);
+	}
 	
 	void OnGUI () {
 		alpha += fadeDir * fadeSpeed * Time.deltaTime;
@@ -24,6 +29,7 @@ public class Fading : MonoBehaviour {
 	}
 	
 	void OnLevelWasLoaded() {
+		GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3 (target.position.x, target.position.y, target.position.z);
 		alpha = 1;
 		BeginFade(-1);
 	}
