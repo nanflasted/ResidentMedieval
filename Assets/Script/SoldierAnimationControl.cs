@@ -34,6 +34,7 @@ public class SoldierAnimationControl : MonoBehaviour {
 	
 		weapon.transform.parent = leftHip.transform; //weapons initialize on the hip, must be drawn
 		weapon.transform.localPosition = new Vector3(0,0,0);
+		weapon.transform.localRotation = Quaternion.identity;
 		shield.transform.parent = leftForearm.transform; //shields initialize on the left arm
 		shield.transform.localPosition = new Vector3(0,0,0);
 	
