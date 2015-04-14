@@ -1,4 +1,4 @@
-﻿// Leah Karasek
+// Leah Karasek
 
 using UnityEngine;
 using System.Collections;
@@ -47,16 +47,18 @@ public class ConversationLoader : MonoBehaviour {
 	
 	// called when a response button is clicked
 	private void LoadNewResponses(int npcResponseNum) {
+		response2.SetActive(true);
+		response3.SetActive(true);
 		currentNode = conversation.AdvanceConversation();
 		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text;
 		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
-		if (response2.transform.FindChild("Text") != null) {
+		if (currentNode.GetPlayerResponse(2).GetComponent<Text>().text != response1.transform.FindChild("Text").GetComponent<Text>().text) {
 			response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(2).GetComponent<Text>().text;
 		}
 		else {
 			response2.SetActive(false);
 		}
-		if (response3.transform.FindChild("Text") != null) {
+		if (currentNode.GetPlayerResponse(3).GetComponent<Text>().text != response1.transform.FindChild("Text").GetComponent<Text>().text) {
 			response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(3).GetComponent<Text>().text;
 		}
 		else {
