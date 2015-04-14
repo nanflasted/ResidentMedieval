@@ -14,27 +14,37 @@ public class HUDManagement : MonoBehaviour {
 	void Start () {
 
 		healthBar.value = player.health;	//check units (player health might need rescaling)
-		level = Application.loadedLevel;
+		/*level = Application.loadedLevel;
 		if (level == 0) {
 			location.text = "Umbreland";
 		} else {
 			location.text = "somewhere else";
+		}*/
+		scene = EditorApplication.currentScene;
+		if (scene == "Assets/HUD/HUD.unity") {
+			scene = "Umbreland";
+		} else if (scene == "Assets/Town2.unity") {
+			scene = "Mocpack";
+		} else if (scene == "Assets/nature1.unity") {
+			scene = "Wilderness";
+		} else {
+			scene = "you broke something";
 		}
-		//scene = EditorApplication.currentScene;
-		//location.text = scene;	//requires renaming of scenes to appropriate town names
+		location.text = scene;	//requires renaming of scenes to appropriate town name
 		//location.text = level.ToString();
 	}
 
 	void Update () {
 
 		healthBar.value = player.health;
-		level = Application.loadedLevel;
+		/*level = Application.loadedLevel;
 		if (level == 0) {
 			location.text = "Umbreland";
 		} else {
 			location.text = "somewhere else";
-		}
-		//location.text = EditorApplication.currentScene;
+		}*/
+		//scene = EditorApplication.currentScene;
+		//location.text = scene;
 		//location.text = level.ToString();
 		if (healthBar.value == 0) {
 			Debug.Log("Dead");	//testing - need to add resetting to 1 in unit class?
@@ -42,5 +52,9 @@ public class HUDManagement : MonoBehaviour {
 
 		//if (inConversation) deactivate all HUD stuff and enable conversation HUD
 	
+	}
+
+	public void decreaseHealth(float amount) {
+		healthBar.value -= amount;	//check damage scaling
 	}
 }
