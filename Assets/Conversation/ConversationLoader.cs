@@ -49,16 +49,26 @@ public class ConversationLoader : MonoBehaviour {
 	private void LoadNewResponses(int npcResponseNum) {
 		response2.SetActive(true);
 		response3.SetActive(true);
-		currentNode = conversation.AdvanceConversation();
+		// if there are no more conversation nodes, leave the conversation
+		if ((currentNode = conversation.AdvanceConversation ()) == null) {
+			Leave ();
+			return;
+		}
+		
+		// otherwise, load new responses from the currentNode
 		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text;
 		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
+		// if response 2 is the same as 1, 1 is the only possible response, so set the other two inactive
 		if (currentNode.GetPlayerResponse(2).GetComponent<Text>().text != response1.transform.FindChild("Text").GetComponent<Text>().text) {
 			response2.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(2).GetComponent<Text>().text;
 		}
 		else {
 			response2.SetActive(false);
+			response3.SetActive (false);
 		}
-		if (currentNode.GetPlayerResponse(3).GetComponent<Text>().text != response1.transform.FindChild("Text").GetComponent<Text>().text) {
+		// if response 3 is the same as 2, 1 and 2 are the only responses, so set 3 inactive
+		if (currentNode.GetPlayerResponse(3).GetComponent<Text>().text != response1.transform.FindChild("Text").GetComponent<Text>().text &&
+		    currentNode.GetPlayerResponse(3).GetComponent<Text>().text != response2.transform.FindChild("Text").GetComponent<Text>().text) {
 			response3.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(3).GetComponent<Text>().text;
 		}
 		else {

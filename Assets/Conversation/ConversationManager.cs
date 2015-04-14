@@ -31,6 +31,9 @@ public class ConversationManager : MonoBehaviour {
 	//advances conversation to next node
 	public ConversationNode AdvanceConversation()
 	{
+		if (conversationIndex > list.Count - 1) {
+			return null;
+		}
 		return (ConversationNode)list[conversationIndex++];
 	}
 	
