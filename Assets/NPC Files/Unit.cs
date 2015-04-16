@@ -13,8 +13,12 @@ public class Unit : MonoBehaviour {
 	public NavMeshAgent agent;
 	public float attackDist; // minimum distance at which the unit will start attacking
 	public float attackAngle; // minimum angle from the opponent at which the unit will start swinging
+<<<<<<< HEAD
+	public BattleManager battleManager;
+=======
 	public UnitManager unitManager;
 	public Animator anim;
+>>>>>>> origin/master
 	
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();	//Give it access to the NavMesh
@@ -47,8 +51,11 @@ public class Unit : MonoBehaviour {
 	}
 
 	// kill the unit; later this should incorporate a death animation
-	void Die() {
-		this.gameObject.SetActive(false);
-		unitManager.units.Remove(this);
+	public void Die() {
+		battleManager.friendlyManager.units.Remove(this);
+		battleManager.enemyManager.units.Remove(this);
+		battleManager.neutralManager.units.Remove(this);
+
+		Object.Destroy(this.gameObject);
 	}
 }
