@@ -18,10 +18,9 @@ public class ConversationLoader : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
-		// get the conversation manager, which holds the conversation, from the npc
-		// right now, this only works with the general
-		GameObject npc = GameObject.FindGameObjectWithTag("General");
-		conversation = npc.GetComponent<ConversationManager>();
+		// get the conversation manager, which holds the conversation, from the player
+		GameObject player = GameObject.Find("Player");
+		conversation = player.GetComponent<ConversationManager>();
 		
 		// fill in the initial reponses for the player and npc
 		LoadNewResponses(1);
