@@ -43,14 +43,36 @@ public class SoldierAnimationControl : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	
+		
+		weapon.transform.localPosition = new Vector3(0,0,0);
+		
 		if(isSwordDrawn){
 			weapon.transform.parent = rightHand.transform; //keeps sword in hand
+			weapon.transform.localPosition = new Vector3(0,0,0);
 		}else{
 			weapon.transform.parent = leftHip.transform; //keeps sword on hip
+			weapon.transform.localPosition = new Vector3(0,0,0);
 		}
 		
 		shield.transform.parent = leftForearm.transform; //so the shield stays in place
+	}
+	
+	void FixedUpdate(){
+	
+		weapon.transform.localPosition = new Vector3(0,0,0);
+		
+		if(isSwordDrawn){
+			weapon.transform.parent = rightHand.transform; //move sword to hand
+			weapon.transform.localPosition = new Vector3(0,0,0);
+		}else{
+			weapon.transform.parent = leftHip.transform; //move sword to hip
+			weapon.transform.localPosition = new Vector3(0,0,0);
+		}
+		
+		if(Input.GetButton("Jump"))
+		{
+		  DrawSword(!isSwordDrawn);
+		}
 	}
 	
 	
