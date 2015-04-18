@@ -53,6 +53,6 @@ public class Unit : MonoBehaviour {
 		battleManager.enemyManager.units.Remove(this);
 		battleManager.neutralManager.units.Remove(this);
 
-		Object.Destroy(this.gameObject);
+		Object.Destroy(this.gameObject); // ANIMATION: replace this with death animation probably
 	}
 }

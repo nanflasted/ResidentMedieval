@@ -27,9 +27,9 @@ public class Neutral : Unit {
 		if (num >= 0) {
 			//Create a fake unit in the opposite direction of the closest unit and run towards that fake unit
 			Vector3 opposite = new Vector3(this.transform.position.x - shortestDist.x * 2, 0, this.transform.position.z - shortestDist.z * 2);
-			agent.SetDestination(opposite);
+			agent.SetDestination(opposite); // ANIMATION: walk/run
 		} else {
-			agent.Stop();
+			agent.Stop(); // ANIMATION: idle
 		}
 	}
 }

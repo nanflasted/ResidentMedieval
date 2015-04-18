@@ -30,13 +30,13 @@ public class Friendly : Unit {
 
 		// attack if close enough to target
 		if (InRange(shortestDist)) {
-			weapon.Swing();
+			weapon.Swing(); // ANIMATION: attack
 			agent.Stop();
 		}
 		else if (num >= 0) {
-			MoveTo (targets[num]);
+			MoveTo (targets[num]); // ANIMATION: walk/run
 		} else {
-			agent.Stop();
+			agent.Stop(); // ANIMATION: idle
 		}
 		
 		
