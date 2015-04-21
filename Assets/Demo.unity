@@ -85,7 +85,7 @@ GameObject:
   - 222: {fileID: 1038867}
   - 114: {fileID: 1038866}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 1-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -133,7 +133,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Ask me the questions, gatekeeper! I, Fridge Largemeat, am not afraid
 --- !u!222 &1038867
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -16477,7 +16477,7 @@ GameObject:
   - 222: {fileID: 423448024}
   - 114: {fileID: 423448023}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Gatekeeper Line 1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -16525,7 +16525,8 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Halt! Those who attempt to enter King RockGroin's castle must answer me
+    these questions three.
 --- !u!222 &423448024
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50526,6 +50527,7 @@ GameObject:
   m_Component:
   - 4: {fileID: 1301082964}
   - 95: {fileID: 1301082965}
+  - 114: {fileID: 1301082966}
   m_Layer: 0
   m_Name: Gatekeeper Lvl 4
   m_TagString: Untagged
@@ -50569,6 +50571,19 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1301082966
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1301082963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b10a968034050d44f858221824eb6846, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerResponses: []
+  npcResponses: []
 --- !u!1 &1302166814
 GameObject:
   m_ObjectHideFlags: 0
@@ -55455,7 +55470,7 @@ GameObject:
   - 222: {fileID: 1402795592}
   - 114: {fileID: 1402795591}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 1-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -55503,7 +55518,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: You've got to be kidding me...
 --- !u!222 &1402795592
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -73532,7 +73547,7 @@ GameObject:
   - 222: {fileID: 1856151713}
   - 114: {fileID: 1856151712}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -73580,7 +73595,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Wait a second I know this...
 --- !u!222 &1856151713
 CanvasRenderer:
   m_ObjectHideFlags: 0
