@@ -133,7 +133,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: Ask me the questions, gatekeeper! I, Fridge Largemeat, am not afraid
+  m_Text: Ask me the questions, gatekeeper! I am not afraid
 --- !u!222 &1038867
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -12814,6 +12814,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1875221293}
   m_RootOrder: 26
+--- !u!1 &321494938
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 321494939}
+  - 222: {fileID: 321494941}
+  - 114: {fileID: 321494940}
+  m_Layer: 5
+  m_Name: Gatekeeper Line 5-1
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &321494939
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321494938}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 885637255}
+  m_RootOrder: 16
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &321494940
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321494938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Clever one aren't you
+--- !u!222 &321494941
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 321494938}
 --- !u!1 &321828246
 GameObject:
   m_ObjectHideFlags: 0
@@ -25574,6 +25640,72 @@ Transform:
   - {fileID: 2008831254}
   m_Father: {fileID: 1834208045}
   m_RootOrder: 0
+--- !u!1 &634201816
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 634201817}
+  - 222: {fileID: 634201819}
+  - 114: {fileID: 634201818}
+  m_Layer: 5
+  m_Name: Player Response 4-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &634201817
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634201816}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 885637255}
+  m_RootOrder: 15
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &634201818
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634201816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Just let me in!
+--- !u!222 &634201819
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 634201816}
 --- !u!1001 &635014022
 Prefab:
   m_ObjectHideFlags: 0
@@ -26878,6 +27010,72 @@ MonoBehaviour:
   - {fileID: 1080216973}
   - {fileID: 1080216973}
   - {fileID: 1080216973}
+--- !u!1 &669637160
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 669637161}
+  - 222: {fileID: 669637163}
+  - 114: {fileID: 669637162}
+  m_Layer: 5
+  m_Name: Gatekeeper Line 5-2
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &669637161
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669637160}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 885637255}
+  m_RootOrder: 17
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &669637162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669637160}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: One day you will understand
+--- !u!222 &669637163
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 669637160}
 --- !u!1 &670616162
 GameObject:
   m_ObjectHideFlags: 0
@@ -29797,7 +29995,7 @@ GameObject:
   - 222: {fileID: 757573869}
   - 114: {fileID: 757573868}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Gatekeeper Line 3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29845,7 +30043,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: What is your quest?
 --- !u!222 &757573869
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -30035,7 +30233,7 @@ GameObject:
   - 222: {fileID: 767391419}
   - 114: {fileID: 767391418}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 2-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -30083,7 +30281,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: <Player Name>
 --- !u!222 &767391419
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -32184,7 +32382,7 @@ GameObject:
   - 222: {fileID: 834459275}
   - 114: {fileID: 834459274}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 2-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -32232,7 +32430,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Fridge McLargemeat
 --- !u!222 &834459275
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -33738,6 +33936,12 @@ RectTransform:
   - {fileID: 1464884965}
   - {fileID: 1963466296}
   - {fileID: 2050553704}
+  - {fileID: 634201817}
+  - {fileID: 321494939}
+  - {fileID: 669637161}
+  - {fileID: 1789603073}
+  - {fileID: 1313868303}
+  - {fileID: 888429683}
   m_Father: {fileID: 0}
   m_RootOrder: 14
   m_AnchorMin: {x: 0, y: 0}
@@ -33871,6 +34075,72 @@ MeshFilter:
   m_PrefabInternal: {fileID: 1939612}
   m_GameObject: {fileID: 888012865}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!1 &888429682
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 888429683}
+  - 222: {fileID: 888429685}
+  - 114: {fileID: 888429684}
+  m_Layer: 5
+  m_Name: Gatekeeper Line 6
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &888429683
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888429682}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 885637255}
+  m_RootOrder: 20
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &888429684
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888429682}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: '*reviews letter* I will take you to Rockgroin, right this way'
+--- !u!222 &888429685
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 888429682}
 --- !u!1 &888829631
 GameObject:
   m_ObjectHideFlags: 0
@@ -50582,8 +50852,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10a968034050d44f858221824eb6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerResponses: []
-  npcResponses: []
+  playerResponses:
+  - {fileID: 1038866}
+  - {fileID: 1856151712}
+  - {fileID: 1402795591}
+  - {fileID: 834459274}
+  - {fileID: 1654398248}
+  - {fileID: 767391418}
+  - {fileID: 1946435826}
+  - {fileID: 1810439067}
+  - {fileID: 2018484269}
+  - {fileID: 1963466297}
+  - {fileID: 2050553705}
+  - {fileID: 634201818}
+  - {fileID: 1313868304}
+  - {fileID: 1313868304}
+  - {fileID: 1313868304}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  npcResponses:
+  - {fileID: 423448023}
+  - {fileID: 423448023}
+  - {fileID: 423448023}
+  - {fileID: 1658890302}
+  - {fileID: 1658890302}
+  - {fileID: 1658890302}
+  - {fileID: 757573868}
+  - {fileID: 757573868}
+  - {fileID: 757573868}
+  - {fileID: 1464884966}
+  - {fileID: 1464884966}
+  - {fileID: 1464884966}
+  - {fileID: 321494940}
+  - {fileID: 669637162}
+  - {fileID: 1789603074}
+  - {fileID: 888429684}
+  - {fileID: 888429684}
+  - {fileID: 888429684}
 --- !u!1 &1302166814
 GameObject:
   m_ObjectHideFlags: 0
@@ -51078,6 +51384,72 @@ Transform:
   m_Children: []
   m_Father: {fileID: 723255926}
   m_RootOrder: 63
+--- !u!1 &1313868302
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1313868303}
+  - 222: {fileID: 1313868305}
+  - 114: {fileID: 1313868304}
+  m_Layer: 5
+  m_Name: Player Response 5
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1313868303
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1313868302}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 885637255}
+  m_RootOrder: 19
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1313868304
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1313868302}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: I have this letter from General Plankchest
+--- !u!222 &1313868305
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1313868302}
 --- !u!1 &1313972733
 GameObject:
   m_ObjectHideFlags: 0
@@ -58311,7 +58683,7 @@ GameObject:
   - 222: {fileID: 1464884967}
   - 114: {fileID: 1464884966}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Gatekeeper Line 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -58359,7 +58731,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: What is the capital of Assyria?
 --- !u!222 &1464884967
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -65751,7 +66123,7 @@ GameObject:
   - 222: {fileID: 1654398249}
   - 114: {fileID: 1654398248}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 2-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -65799,7 +66171,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Hack Blowfist
 --- !u!222 &1654398249
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -65961,7 +66333,7 @@ GameObject:
   - 222: {fileID: 1658890303}
   - 114: {fileID: 1658890302}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Gatekeeper Line 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -66009,7 +66381,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: What, is your name?
 --- !u!222 &1658890303
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -70621,6 +70993,72 @@ Transform:
   - {fileID: 1671504833}
   m_Father: {fileID: 918346196}
   m_RootOrder: 0
+--- !u!1 &1789603072
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 224: {fileID: 1789603073}
+  - 222: {fileID: 1789603075}
+  - 114: {fileID: 1789603074}
+  m_Layer: 5
+  m_Name: Gatekeeper Line 5-3
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1789603073
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789603072}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 885637255}
+  m_RootOrder: 18
+  m_AnchorMin: {x: .5, y: .5}
+  m_AnchorMax: {x: .5, y: .5}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 160, y: 30}
+  m_Pivot: {x: .5, y: .5}
+--- !u!114 &1789603074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789603072}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f5f67c52d1564df4a8936ccd202a3bd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: Get in touch with pop culture Mclargemeat
+--- !u!222 &1789603075
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1789603072}
 --- !u!1 &1789682966
 GameObject:
   m_ObjectHideFlags: 0
@@ -71376,7 +71814,7 @@ GameObject:
   - 222: {fileID: 1810439068}
   - 114: {fileID: 1810439067}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 3-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -71424,7 +71862,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: To slay zombies
 --- !u!222 &1810439068
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -77185,7 +77623,7 @@ GameObject:
   - 222: {fileID: 1946435827}
   - 114: {fileID: 1946435826}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 3-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77216,7 +77654,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: To find the gra- I mean to speak with King Rockgroin
 --- !u!222 &1946435827
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -77852,7 +78290,7 @@ GameObject:
   - 222: {fileID: 1963466298}
   - 114: {fileID: 1963466297}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 4-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -77900,7 +78338,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: During which expansion period?
 --- !u!222 &1963466298
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -80139,7 +80577,7 @@ GameObject:
   - 222: {fileID: 2018484270}
   - 114: {fileID: 2018484269}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 3-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -80187,7 +80625,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: I can't believe this is actually happening
 --- !u!222 &2018484270
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -81449,7 +81887,7 @@ GameObject:
   - 222: {fileID: 2050553706}
   - 114: {fileID: 2050553705}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 4-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -81497,7 +81935,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: I don't know that!
 --- !u!222 &2050553706
 CanvasRenderer:
   m_ObjectHideFlags: 0
