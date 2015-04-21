@@ -28560,7 +28560,7 @@ GameObject:
   - 222: {fileID: 757215468}
   - 114: {fileID: 757215467}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 1-2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -28608,7 +28608,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: " No problem.\r\n"
 --- !u!222 &757215468
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -50559,7 +50559,7 @@ GameObject:
   - 222: {fileID: 1348250069}
   - 114: {fileID: 1348250068}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 1-1
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -50607,7 +50607,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "You\u2019re welcome. Is there anything else I can do?\r"
 --- !u!222 &1348250069
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -52317,7 +52317,7 @@ GameObject:
   - 222: {fileID: 1381226638}
   - 114: {fileID: 1381226637}
   m_Layer: 5
-  m_Name: Text
+  m_Name: Player Response 1-3
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -52365,7 +52365,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: Yeah, yeah..
 --- !u!222 &1381226638
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -78751,7 +78751,7 @@ GameObject:
   - 222: {fileID: 2085852070}
   - 114: {fileID: 2085852069}
   m_Layer: 5
-  m_Name: Text
+  m_Name: General Line 2
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -78799,7 +78799,9 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: New Text
+  m_Text: "I\u2019m glad you asked, although you probably won\u2019t be. I need you
+    to head over to capcom backwards sand convince their king to help us fight these
+    monsters. We won\u2019t be able to win this fight without their help. "
 --- !u!222 &2085852070
 CanvasRenderer:
   m_ObjectHideFlags: 0
