@@ -4,6 +4,7 @@ using System.Collections;
 public class Player : Friendly {
 
 	public GameObject dialogueCanvas;
+	public GameObject enterConversationButton;
 	public int conversationDistance;
 	
 	void Start () {
@@ -28,9 +29,16 @@ public class Player : Friendly {
 			weapon.Swing();
 		}
 		
+		// find the npc that can be talked to
 		GameObject npc = GameObject.FindGameObjectWithTag("DialogueNPC");
-		if (Vector3.Distance(npc.transform.position, gameObject.transform.position) <= 5 && GameObject.Find("DialogueCanvas") == null) {
-			Instantiate(dialogueCanvas);
+		// display the enter conversation button
+		if (Vector3.Distance(npc.transform.position, gameObject.transform.position) <= conversationDistance && GameObject.Find("DialogueCanvas") == null) {
+			Instantiate(enterConversationButton);
 		}
+	}
+	
+	// if button is clicked, enter the conversation
+	public void EnterConversation() {
+		Instantiate(dialogueCanvas);
 	}
 }
