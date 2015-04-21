@@ -6637,6 +6637,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   attackDist: 1.5
   attackAngle: 90
+  battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
   anim: {fileID: 0}
 --- !u!95 &184050005
@@ -38426,6 +38427,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ad3aa3c587dde458f67547186ba3bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  unitPrefab: {fileID: 0}
+  spawnPoints: []
+  spawnDelay: 0
   units:
   - {fileID: 1228375975}
   - {fileID: 184050004}
@@ -42016,8 +42020,11 @@ MonoBehaviour:
   agent: {fileID: 0}
   attackDist: 0
   attackAngle: 0
+  battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
   anim: {fileID: 0}
+  dialogueCanvas: {fileID: 162810, guid: ecde71bfbf22a486ea4f45978475ce14, type: 2}
+  conversationDistance: 5
 --- !u!1 &1228816434
 GameObject:
   m_ObjectHideFlags: 0

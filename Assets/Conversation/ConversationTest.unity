@@ -110,10 +110,13 @@ MonoBehaviour:
   m_GameObject: {fileID: 11625403}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fbc69818b71664c1fa2f60f06ea21972, type: 3}
+  m_Script: {fileID: 11500000, guid: 33dfb32110c8d483ba6ab28120c438d4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  dialogueCanvas: {fileID: 162810, guid: ecde71bfbf22a486ea4f45978475ce14, type: 2}
+  response1: {fileID: 0}
+  response2: {fileID: 0}
+  response3: {fileID: 0}
+  npcResponse: {fileID: 0}
 --- !u!1 &81361832
 GameObject:
   m_ObjectHideFlags: 0
