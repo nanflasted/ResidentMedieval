@@ -6,6 +6,7 @@ public class Fading : MonoBehaviour {
 	public Texture fadeOutTexture;
 	public float fadeSpeed = 0.8f;
 	public Transform target;
+	public string currentDestination;
 	
 	private int drawDepth = -1000;
 	private float alpha = 1.0f;
@@ -29,7 +30,9 @@ public class Fading : MonoBehaviour {
 	}
 	
 	void OnLevelWasLoaded() {
+		target = GameObject.FindGameObjectWithTag(currentDestination).transform;
 		GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3 (target.position.x, target.position.y, target.position.z);
+		GameObject.FindGameObjectWithTag("Player").transform.rotation = target.localRotation;
 		alpha = 1;
 		BeginFade(-1);
 	}
