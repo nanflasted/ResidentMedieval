@@ -32,7 +32,7 @@ public class Enemy : Unit {
 		}
 		
 		// attack if close enough to target
-		Debug.Log (InRange(shortestDist));
+		//Debug.Log (InRange(shortestDist));
 		if (InRange(shortestDist)) {
 			weapon.Swing(); // ANIMATION: attack
 			//agent.Stop();

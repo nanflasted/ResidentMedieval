@@ -7826,6 +7826,14 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: -25.5200005
       objectReference: {fileID: 0}
+    - target: {fileID: 11415878, guid: bfbb34d160e975e4387898128ae8fd1f, type: 2}
+      propertyPath: numFriendlies
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 11415878, guid: bfbb34d160e975e4387898128ae8fd1f, type: 2}
+      propertyPath: numEnemies
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: bfbb34d160e975e4387898128ae8fd1f, type: 2}
   m_RootGameObject: {fileID: 1795782981}
@@ -68003,8 +68011,8 @@ MonoBehaviour:
   friendlyManager: {fileID: 1337426412}
   enemyManager: {fileID: 2038107592}
   neutralManager: {fileID: 43818168}
-  numFriendlies: 5
-  numEnemies: 5
+  numFriendlies: 1
+  numEnemies: 1
   numNeutrals: 0
 --- !u!1 &1797019339
 GameObject:

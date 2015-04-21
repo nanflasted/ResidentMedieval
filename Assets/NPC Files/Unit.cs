@@ -37,8 +37,9 @@ public class Unit : MonoBehaviour {
 
 	// damages this unit
 	public void DoDamage(float amount) {
+
 		//call to HUD to update health bar
-		HUDmanager.decreaseHealth(amount);
+		//HUDmanager.decreaseHealth(amount);
 		health -= amount;
 		if (health <= 0f) {
 			
