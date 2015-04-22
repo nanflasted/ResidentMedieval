@@ -5,6 +5,7 @@ using UnityEngine.UI;
 //Master class for NPC units
 //Anything that should be done by all units should go here
 
+[RequireComponent(typeof (Animator))]
 public class Unit : MonoBehaviour {
 
 	public HUDManagement HUDmanager; //used to alter health UI
@@ -15,7 +16,7 @@ public class Unit : MonoBehaviour {
 	public float attackAngle; // minimum angle from the opponent at which the unit will start swinging
 	public BattleManager battleManager;
 	public UnitManager unitManager;
-	public Animator anim;
+	private Animator anim;
 	
 	void Start () {
 		agent = GetComponent<NavMeshAgent>();	//Give it access to the NavMesh

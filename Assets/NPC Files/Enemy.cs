@@ -2,10 +2,15 @@
 using System.Collections.Generic;
 
 //Enemies run towards Neutrals and Friendlies
-
+[RequireComponent(typeof (Animator))]
 public class Enemy : Unit {
 
-	public ZombieAnimationControl animControl;
+
+	private Animator anim;
+
+	void Start(){
+		anim = GetComponent<Animator>();
+	}
 
 	void Update () {
 		//Check for units that are friendlies or neutrals and add them to the array of units this unit cares about (filters out other enemies)
@@ -37,19 +42,19 @@ public class Enemy : Unit {
 		//Debug.Log (InRange(shortestDist));
 		if (InRange(shortestDist)) {
 			weapon.Swing(); 
-			animControl.Attack(true);// ANIMATION: attack
+			anim.SetBool ("Attack", true);// ANIMATION: attack
 			//agent.Stop();
 			agent.speed=0;
 			anim.SetFloat("Speed", agent.speed);
 		} else if (num >= 0) {
 			//Move to the closest enemy if further than attackDist
-			animControl.Attack(false);
+			anim.SetBool ("Attack", false);
 			MoveTo (targets[num]); 
 			anim.SetFloat("Speed", agent.speed);// ANIMATION: walk/run
 		}
 		else {
 			agent.Stop(); // ANIMATION: idle or whatever
-			animControl.Attack(false);
+			anim.SetBool ("Attack", false);
 		}
 	}
 }
