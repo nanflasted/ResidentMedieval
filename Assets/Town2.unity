@@ -2658,6 +2658,87 @@ MeshFilter:
   m_PrefabInternal: {fileID: 725427189}
   m_GameObject: {fileID: 114170528}
   m_Mesh: {fileID: 4300000, guid: b2d832f7c2818d34e99cca163f9fdde1, type: 3}
+--- !u!1 &115940357
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 115940362}
+  - 33: {fileID: 115940361}
+  - 65: {fileID: 115940360}
+  - 23: {fileID: 115940359}
+  - 114: {fileID: 115940358}
+  m_Layer: 0
+  m_Name: playerdoor
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &115940358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115940357}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2bcd02feb60624afeb532a796ebfc4a5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!23 &115940359
+Renderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115940357}
+  m_Enabled: 0
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_LightmapIndex: 255
+  m_LightmapTilingOffset: {x: 1, y: 1, z: 0, w: 0}
+  m_Materials:
+  - {fileID: 10302, guid: 0000000000000000f000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 0
+  m_LightProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+--- !u!65 &115940360
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115940357}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!33 &115940361
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115940357}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!4 &115940362
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 115940357}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 377.109985, y: 1.39999998, z: 362.390015}
+  m_LocalScale: {x: 1.03461933, y: 1.91244256, z: .203582764}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 12
 --- !u!1001 &118755963
 Prefab:
   m_ObjectHideFlags: 0
@@ -8372,6 +8453,7 @@ MonoBehaviour:
   unitManager: {fileID: 0}
   anim: {fileID: 0}
   dialogueCanvas: {fileID: 0}
+  enterConversationButton: {fileID: 0}
   conversationDistance: 0
 --- !u!114 &337433253
 MonoBehaviour:
@@ -14262,6 +14344,33 @@ Prefab:
   m_RootGameObject: {fileID: 1967563043}
   m_IsPrefabParent: 0
   m_IsExploded: 1
+--- !u!1 &652906941
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 652906942}
+  m_Layer: 0
+  m_Name: playerdoortransform
+  m_TagString: playerdooroutside
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &652906942
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 652906941}
+  m_LocalRotation: {x: 0, y: .999942601, z: 0, w: .0107170828}
+  m_LocalPosition: {x: 377, y: 1.23000002, z: 358.959991}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 13
 --- !u!1 &653008510
 GameObject:
   m_ObjectHideFlags: 0
@@ -27486,7 +27595,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 10
 --- !u!1 &1260743605
 GameObject:
   m_ObjectHideFlags: 0
@@ -45662,6 +45771,10 @@ MonoBehaviour:
   player: {fileID: 337433252}
   scene: 
   level: 0
+  pauseBackdrop: {fileID: 0}
+  gamePaused: {fileID: 0}
+  exitGame: {fileID: 0}
+  isPaused: 0
 --- !u!4 &2103776092
 Transform:
   m_ObjectHideFlags: 0
@@ -45673,7 +45786,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 11
 --- !u!1 &2105658588
 GameObject:
   m_ObjectHideFlags: 0

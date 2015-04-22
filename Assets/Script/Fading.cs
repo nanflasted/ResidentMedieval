@@ -32,7 +32,7 @@ public class Fading : MonoBehaviour {
 	void OnLevelWasLoaded() {
 		target = GameObject.FindGameObjectWithTag(currentDestination).transform;
 		GameObject.FindGameObjectWithTag("Player").transform.position = new Vector3 (target.position.x, target.position.y, target.position.z);
-		GameObject.FindGameObjectWithTag("Player").transform.rotation = target.localRotation;
+		GameObject.FindGameObjectWithTag("Player").transform.rotation = target.rotation;
 		alpha = 1;
 		BeginFade(-1);
 	}
