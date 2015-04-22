@@ -10,10 +10,14 @@ public class HUDManagement : MonoBehaviour {
 	public Player player;
 	public string scene;
 	public int level;
+	public RawImage pauseBackdrop;
+	public Text gamePaused;
+	public Button exitGame;
+	public bool isPaused;
 	
 	void Start () {
 
-		healthBar.value = player.health;	//check units (player health might need rescaling)
+		healthBar.value = player.health / 100;	//check units (player health might need rescaling)
 		/*level = Application.loadedLevel;
 		if (level == 0) {
 			location.text = "Umbreland";
@@ -31,23 +35,27 @@ public class HUDManagement : MonoBehaviour {
 			scene = "you broke something";
 		}
 		location.text = scene;	//requires renaming of scenes to appropriate town name
-		//location.text = level.ToString();
+		isPaused = false;
+		gamePaused.enabled = false;
+		exitGame.enabled = false;
+		pauseBackdrop.canvasRenderer.SetAlpha(0);
 	}
 
 	void Update () {
 
-		healthBar.value = player.health;
-		/*level = Application.loadedLevel;
-		if (level == 0) {
-			location.text = "Umbreland";
-		} else {
-			location.text = "somewhere else";
-		}*/
-		//scene = EditorApplication.currentScene;
-		//location.text = scene;
-		//location.text = level.ToString();
+		healthBar.value = player.health / 100;
 		if (healthBar.value == 0) {
 			Debug.Log("Dead");	//testing - need to add resetting to 1 in unit class?
+		}
+
+		if (Input.GetKeyDown (KeyCode.Escape)) {
+			isPaused = true;
+		}
+
+		if (isPaused) {
+			pauseBackdrop.canvasRenderer.SetAlpha(168);
+			gamePaused.enabled = true;
+			exitGame.enabled = true;
 		}
 
 		//if (inConversation) deactivate all HUD stuff and enable conversation HUD
