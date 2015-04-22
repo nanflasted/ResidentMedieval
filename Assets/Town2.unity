@@ -17032,7 +17032,7 @@ Canvas:
   m_Enabled: 1
   serializedVersion: 2
   m_RenderMode: 0
-  m_Camera: {fileID: 0}
+  m_Camera: {fileID: 2129666277}
   m_PlaneDistance: 100
   m_PixelPerfect: 0
   m_ReceivesEvents: 1
@@ -43769,6 +43769,14 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 22377728, guid: aed72be2880a2a246b205ef4c9554fb0, type: 2}
+      propertyPath: m_RenderMode
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 22377728, guid: aed72be2880a2a246b205ef4c9554fb0, type: 2}
+      propertyPath: m_Camera
+      value: 
+      objectReference: {fileID: 2129666277}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: aed72be2880a2a246b205ef4c9554fb0, type: 2}
   m_RootGameObject: {fileID: 766370356}
