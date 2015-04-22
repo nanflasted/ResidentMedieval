@@ -13,17 +13,12 @@ public class HUDManagement : MonoBehaviour {
 	public RawImage pauseBackdrop;
 	public Text gamePaused;
 	public Button exitGame;
+	public Button resumeGame;
 	public bool isPaused;
 	
 	void Start () {
 
 		healthBar.value = player.health / 100;	//check units (player health might need rescaling)
-		/*level = Application.loadedLevel;
-		if (level == 0) {
-			location.text = "Umbreland";
-		} else {
-			location.text = "somewhere else";
-		}*/
 		scene = EditorApplication.currentScene;
 		if (scene == "Assets/HUD/HUD.unity") {
 			scene = "Umbreland";
@@ -34,10 +29,13 @@ public class HUDManagement : MonoBehaviour {
 		} else {
 			scene = "you broke something";
 		}
-		location.text = scene;	//requires renaming of scenes to appropriate town name
+		location.text = scene;
 		isPaused = false;
-		gamePaused.enabled = false;
-		exitGame.enabled = false;
+		//gamePaused.enabled = false;
+		gamePaused.gameObject.SetActive(false);
+		//exitGame.enabled = false;
+		exitGame.gameObject.SetActive(false);
+		resumeGame.gameObject.SetActive(false);
 		pauseBackdrop.canvasRenderer.SetAlpha(0);
 	}
 
@@ -49,13 +47,25 @@ public class HUDManagement : MonoBehaviour {
 		}
 
 		if (Input.GetKeyDown (KeyCode.Escape)) {
-			isPaused = true;
+			isPaused = !isPaused;
 		}
 
 		if (isPaused) {
-			pauseBackdrop.canvasRenderer.SetAlpha(168);
-			gamePaused.enabled = true;
-			exitGame.enabled = true;
+			pauseBackdrop.canvasRenderer.SetAlpha (168);
+			//gamePaused.enabled = true;
+			gamePaused.gameObject.SetActive(true);
+			//exitGame.enabled = true;
+			exitGame.gameObject.SetActive(true);
+			resumeGame.gameObject.SetActive(true);
+			Time.timeScale = 0;
+		} else {
+			pauseBackdrop.canvasRenderer.SetAlpha (0);
+			//gamePaused.enabled = false;
+			gamePaused.gameObject.SetActive(false);
+			//exitGame.enabled = false;
+			exitGame.gameObject.SetActive(false);
+			resumeGame.gameObject.SetActive(false);
+			Time.timeScale = 1;
 		}
 
 		//if (inConversation) deactivate all HUD stuff and enable conversation HUD
@@ -64,5 +74,14 @@ public class HUDManagement : MonoBehaviour {
 
 	public void decreaseHealth(float amount) {
 		healthBar.value -= amount;	//check damage scaling
+	}
+
+	public void resume() {
+		isPaused = false;
+	}
+
+	public void quitGame() {
+		Application.LoadLevel(4);
+		//Debug.Log("Exit Game");
 	}
 }

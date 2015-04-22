@@ -44,6 +44,10 @@ MonoBehaviour:
   player: {fileID: 0}
   scene: 
   level: 0
+  pauseBackdrop: {fileID: 0}
+  gamePaused: {fileID: 0}
+  exitGame: {fileID: 0}
+  isPaused: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
