@@ -2738,7 +2738,7 @@ Transform:
   m_LocalScale: {x: 1.03461933, y: 1.91244256, z: .203582764}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 12
+  m_RootOrder: 11
 --- !u!1001 &118755963
 Prefab:
   m_ObjectHideFlags: 0
@@ -14370,7 +14370,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 13
+  m_RootOrder: 12
 --- !u!1 &653008510
 GameObject:
   m_ObjectHideFlags: 0
@@ -27552,50 +27552,6 @@ Prefab:
   m_RootGameObject: {fileID: 1392647390}
   m_IsPrefabParent: 0
   m_IsExploded: 1
---- !u!1 &1254766195
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 144232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-  m_PrefabInternal: {fileID: 1297949715}
-  serializedVersion: 4
-  m_Component:
-  - 4: {fileID: 1254766197}
-  - 114: {fileID: 1254766196}
-  m_Layer: 0
-  m_Name: SceneTransition
-  m_TagString: ST
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!114 &1254766196
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 11444232, guid: 3d1acbf5503c147948ace8b588533c46,
-    type: 2}
-  m_PrefabInternal: {fileID: 1297949715}
-  m_GameObject: {fileID: 1254766195}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 00bcbc729288e48699ba896b5aed0f85, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fadeOutTexture: {fileID: 2800000, guid: 8e8b3272e22f347f99c01a81bb04f86b, type: 3}
-  fadeSpeed: .800000012
-  target: {fileID: 0}
-  currentDestination: 
---- !u!4 &1254766197
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-  m_PrefabInternal: {fileID: 1297949715}
-  m_GameObject: {fileID: 1254766195}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 509.314606, y: -143.932495, z: 420.13382}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 10
 --- !u!1 &1260743605
 GameObject:
   m_ObjectHideFlags: 0
@@ -28357,50 +28313,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 578bce7df407f7844b2489d6a6a74897, type: 2}
   m_RootGameObject: {fileID: 1608363206}
-  m_IsPrefabParent: 0
-  m_IsExploded: 1
---- !u!1001 &1297949715
-Prefab:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 0}
-    m_Modifications:
-    - target: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-      propertyPath: m_LocalPosition.x
-      value: 509.314606
-      objectReference: {fileID: 0}
-    - target: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-      propertyPath: m_LocalPosition.y
-      value: -143.932495
-      objectReference: {fileID: 0}
-    - target: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-      propertyPath: m_LocalPosition.z
-      value: 420.13382
-      objectReference: {fileID: 0}
-    - target: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 444232, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-      propertyPath: m_RootOrder
-      value: 10
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_ParentPrefab: {fileID: 100100000, guid: 3d1acbf5503c147948ace8b588533c46, type: 2}
-  m_RootGameObject: {fileID: 1254766195}
   m_IsPrefabParent: 0
   m_IsExploded: 1
 --- !u!1 &1298356338
@@ -45782,6 +45694,7 @@ MonoBehaviour:
   pauseBackdrop: {fileID: 0}
   gamePaused: {fileID: 0}
   exitGame: {fileID: 0}
+  resumeGame: {fileID: 0}
   isPaused: 0
 --- !u!4 &2103776092
 Transform:
@@ -45794,7 +45707,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 11
+  m_RootOrder: 10
 --- !u!1 &2105658588
 GameObject:
   m_ObjectHideFlags: 0
