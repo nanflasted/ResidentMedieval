@@ -5,6 +5,8 @@ using System.Collections.Generic;
 
 public class Enemy : Unit {
 
+	public ZombieAnimationControl animControl;
+
 	void Update () {
 		//Check for units that are friendlies or neutrals and add them to the array of units this unit cares about (filters out other enemies)
 		List<Unit> targetList = new List<Unit>();
@@ -34,17 +36,20 @@ public class Enemy : Unit {
 		// attack if close enough to target
 		//Debug.Log (InRange(shortestDist));
 		if (InRange(shortestDist)) {
-			weapon.Swing(); // ANIMATION: attack
+			weapon.Swing(); 
+			animControl.Attack(true);// ANIMATION: attack
 			//agent.Stop();
 			agent.speed=0;
 			anim.SetFloat("Speed", agent.speed);
 		} else if (num >= 0) {
 			//Move to the closest enemy if further than attackDist
-			MoveTo (targets[num]); // ANIMATION: walk/run
-			anim.SetFloat("Speed", agent.speed);
+			animControl.Attack(false);
+			MoveTo (targets[num]); 
+			anim.SetFloat("Speed", agent.speed);// ANIMATION: walk/run
 		}
 		else {
 			agent.Stop(); // ANIMATION: idle or whatever
+			animControl.Attack(false);
 		}
 	}
 }
