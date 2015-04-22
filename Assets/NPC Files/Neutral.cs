@@ -5,6 +5,8 @@ using System.Collections;
 
 public class Neutral : Unit {
 	
+	public NPCAnimationControl animControl;
+	
 	void Update () {
 		//Check for units that are enemies and add them to the array of units this unit cares about (filters out other neutrals and friendlies)
 		Unit[] targets = battleManager.enemyManager.units.ToArray();
