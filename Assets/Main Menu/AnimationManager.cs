@@ -3,10 +3,10 @@ using System.Collections;
 
 public class AnimationManager : MonoBehaviour {
 
-	public Animation loop;
+	public Player player;
 	// Use this for initialization
 	void Start () {
-		loop.Play ();
+		player.animation.Play ();
 	}
 	
 	// Update is called once per frame

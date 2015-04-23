@@ -2156,6 +2156,14 @@ Prefab:
       propertyPath: m_OnClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1913194490}
+    - target: {fileID: 22487990, guid: 302064ab1892e1a4aa118d88d0a50a70, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: -41
+      objectReference: {fileID: 0}
+    - target: {fileID: 22488012, guid: 302064ab1892e1a4aa118d88d0a50a70, type: 2}
+      propertyPath: m_AnchoredPosition.x
+      value: 207
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 302064ab1892e1a4aa118d88d0a50a70, type: 2}
   m_RootGameObject: {fileID: 2074894717}
@@ -12155,7 +12163,7 @@ RectTransform:
   m_RootOrder: 1
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: 233, y: -119}
+  m_AnchoredPosition: {x: 207, y: -119}
   m_SizeDelta: {x: 120, y: 40}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &379321699
@@ -35049,6 +35057,7 @@ GameObject:
   - 33: {fileID: 1147601033}
   - 65: {fileID: 1147601032}
   - 23: {fileID: 1147601031}
+  - 111: {fileID: 1147601035}
   m_Layer: 0
   m_Name: Cube
   m_TagString: Untagged
@@ -35107,6 +35116,21 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1461962473}
   m_RootOrder: 8
+--- !u!111 &1147601035
+Animation:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1147601030}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 85aee8e6799a4ae4683099df474d1ab1, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 85aee8e6799a4ae4683099df474d1ab1, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 1
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!1 &1149922689
 GameObject:
   m_ObjectHideFlags: 0
@@ -67098,7 +67122,7 @@ RectTransform:
   m_RootOrder: 0
   m_AnchorMin: {x: .5, y: .5}
   m_AnchorMax: {x: .5, y: .5}
-  m_AnchoredPosition: {x: -68, y: -106}
+  m_AnchoredPosition: {x: -41, y: -106}
   m_SizeDelta: {x: 400, y: 100}
   m_Pivot: {x: .5, y: .5}
 --- !u!114 &2120054145
