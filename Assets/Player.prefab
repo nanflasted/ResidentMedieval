@@ -59,7 +59,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 155274}
   m_LocalRotation: {x: 0, y: -.657422841, z: 0, w: .75352186}
-  m_LocalPosition: {x: 392.410004, y: 3.13000011, z: 357.470001}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1.01771677, z: .372274429}
   m_Children:
   - {fileID: 455272}
@@ -130,9 +130,9 @@ MonoBehaviour:
   attackAngle: 0
   battleManager: {fileID: 0}
   unitManager: {fileID: 0}
-  anim: {fileID: 0}
   dialogueCanvas: {fileID: 0}
-  conversationDistance: 0
+  enterConversationButton: {fileID: 0}
+  conversationDistance: 5
 --- !u!114 &11455270
 MonoBehaviour:
   m_ObjectHideFlags: 1
