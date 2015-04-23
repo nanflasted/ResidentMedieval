@@ -1,10 +1,9 @@
 ﻿// Leah Karasek
-
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class MultipleConvosTest : MonoBehaviour {
+public class ConversationLoader : MonoBehaviour {
 	
 	public GameObject response1;
 	public GameObject response2;
@@ -15,13 +14,22 @@ public class MultipleConvosTest : MonoBehaviour {
 	private int nextNPCResponse;
 	private ConversationNode currentNode;
 	private ConversationManager[] conversations;
+	private GameObject closestnpc;
 	
 	// Use this for initialization
 	void Start () {
 		// get the conversation manager, which holds the conversation, from the player
-		GameObject[] npcs = GameObject.FindGameObjectsWithTag("DialogueNPC");
-		for (int i = 0; i < conversations.Length; i++) {
+		GameObject[] npcs = GameObject.FindGameObjectWithTag("DialogueNPC");
+		for (int i = 0; i < npcs.Length; i++) {
 			conversations[i] = npcs[i].GetComponent<ConversationManager>();
+		}
+		
+		int closestDist = 0;
+		for (int i = 0; i < npcs.Length; i++) {
+			if (Vector3.Distance (npcs[i].transform.position, gameObject.transform.position) <= closestDist) {
+				closestDist = Vector3.Distance (npcs[i].transform.position, gameObject.transform.position);
+			}
+			closestnpc = i;
 		}
 		
 		// fill in the initial reponses for the player and npc
@@ -52,7 +60,7 @@ public class MultipleConvosTest : MonoBehaviour {
 		response2.SetActive(true);
 		response3.SetActive(true);
 		// if there are no more conversation nodes, leave the conversation
-		if ((currentNode = conversation.AdvanceConversation ()) == null) {
+		if ((currentNode = conversations[closestnpc].AdvanceConversation ()) == null) {
 			Leave ();
 			return;
 		}
