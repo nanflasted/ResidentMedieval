@@ -19,13 +19,16 @@ public class HUDManagement : MonoBehaviour {
 	void Start () {
 
 		healthBar.value = player.health / 100;	//check units (player health might need rescaling)
-		scene = EditorApplication.currentScene;
-		if (scene == "Assets/HUD/HUD.unity") {
-			scene = "Umbreland";
-		} else if (scene == "Assets/Town2.unity") {
+		//scene = EditorApplication.currentScene;
+		level = Application.loadedLevel;
+		if (level == 0) {
 			scene = "Mocpack";
-		} else if (scene == "Assets/nature1.unity") {
+		} else if (level == 1) {
+			scene = "Umbreland";
+		} else if (level == 2) {
 			scene = "Wilderness";
+		} else if (level == 3) {
+			scene = "House";
 		} else {
 			scene = "you broke something";
 		}
@@ -40,6 +43,20 @@ public class HUDManagement : MonoBehaviour {
 	}
 
 	void Update () {
+
+		level = Application.loadedLevel;
+		if (level == 0) {
+			scene = "Mocpack";
+		} else if (level == 1) {
+			scene = "Umbreland";
+		} else if (level == 2) {
+			scene = "Wilderness";
+		} else if (level == 3) {
+			scene = "House";
+		} else {
+			scene = "you broke something";
+		}
+		location.text = scene;
 
 		healthBar.value = player.health / 100;
 		if (healthBar.value == 0) {

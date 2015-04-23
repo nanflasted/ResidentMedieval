@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!1 &162786
 GameObject:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
@@ -225,7 +225,7 @@ MonoBehaviour:
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FontData:
     m_Font: {fileID: 12800000, guid: 30c13adf7a4b2ea45a384bb692539510, type: 3}
-    m_FontSize: 20
+    m_FontSize: 30
     m_FontStyle: 1
     m_BestFit: 1
     m_MinSize: 10
@@ -235,7 +235,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 1
-  m_Text: This is where the NPC's dialogue goes
+  m_Text: 
 --- !u!114 &11462788
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -322,7 +322,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 1, g: 1, b: 1, a: .39199999}
+  m_Color: {r: 0, g: 0, b: 0, a: .392156869}
   m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
   m_Type: 1
   m_PreserveAspect: 0
@@ -826,14 +826,14 @@ RectTransform:
   m_GameObject: {fileID: 162786}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: .740740716, y: 7.14285707, z: 1}
   m_Children: []
-  m_Father: {fileID: 22462810}
+  m_Father: {fileID: 22462790}
   m_RootOrder: 0
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
-  m_AnchoredPosition: {x: -7, y: 150}
-  m_SizeDelta: {x: 400, y: 80}
+  m_AnchoredPosition: {x: -5.92591667, y: 21.4285736}
+  m_SizeDelta: {x: 520, y: 80}
   m_Pivot: {x: 1, y: .5}
 --- !u!224 &22462788
 RectTransform:
@@ -847,7 +847,7 @@ RectTransform:
   m_Children:
   - {fileID: 22462796}
   m_Father: {fileID: 22462810}
-  m_RootOrder: 1
+  m_RootOrder: 0
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
   m_AnchoredPosition: {x: 5, y: 50}
@@ -862,13 +862,14 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1.35000002, y: .140000001, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 22462786}
   m_Father: {fileID: 22462810}
-  m_RootOrder: 6
+  m_RootOrder: 5
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
   m_AnchoredPosition: {x: 1, y: 147}
-  m_SizeDelta: {x: 311, y: 625}
+  m_SizeDelta: {x: 400, y: 625}
   m_Pivot: {x: 1, y: .5}
 --- !u!224 &22462794
 RectTransform:
@@ -881,7 +882,7 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 22462810}
-  m_RootOrder: 5
+  m_RootOrder: 4
   m_AnchorMin: {x: .5, y: 1}
   m_AnchorMax: {x: .5, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
@@ -916,7 +917,7 @@ RectTransform:
   m_Children:
   - {fileID: 22462812}
   m_Father: {fileID: 22462810}
-  m_RootOrder: 4
+  m_RootOrder: 3
   m_AnchorMin: {x: 1, y: 0}
   m_AnchorMax: {x: 1, y: 0}
   m_AnchoredPosition: {x: 5, y: 16}
@@ -951,7 +952,7 @@ RectTransform:
   m_Children:
   - {fileID: 22462814}
   m_Father: {fileID: 22462810}
-  m_RootOrder: 3
+  m_RootOrder: 2
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
   m_AnchoredPosition: {x: 5, y: -150}
@@ -969,7 +970,7 @@ RectTransform:
   m_Children:
   - {fileID: 22462802}
   m_Father: {fileID: 22462810}
-  m_RootOrder: 2
+  m_RootOrder: 1
   m_AnchorMin: {x: 1, y: .5}
   m_AnchorMax: {x: 1, y: .5}
   m_AnchoredPosition: {x: 5, y: -50}
@@ -985,7 +986,6 @@ RectTransform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 0, y: 0, z: 0}
   m_Children:
-  - {fileID: 22462786}
   - {fileID: 22462788}
   - {fileID: 22462808}
   - {fileID: 22462806}
