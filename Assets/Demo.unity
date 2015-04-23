@@ -51319,8 +51319,44 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b10a968034050d44f858221824eb6846, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerResponses: []
-  npcResponses: []
+  playerResponses:
+  - {fileID: 1038866}
+  - {fileID: 1856151712}
+  - {fileID: 1402795591}
+  - {fileID: 834459274}
+  - {fileID: 1654398248}
+  - {fileID: 767391418}
+  - {fileID: 1946435826}
+  - {fileID: 1810439067}
+  - {fileID: 2018484269}
+  - {fileID: 1963466297}
+  - {fileID: 2050553705}
+  - {fileID: 1404125101}
+  - {fileID: 1585855006}
+  - {fileID: 1585855006}
+  - {fileID: 1585855006}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  npcResponses:
+  - {fileID: 423448023}
+  - {fileID: 423448023}
+  - {fileID: 423448023}
+  - {fileID: 1658890302}
+  - {fileID: 1658890302}
+  - {fileID: 1658890302}
+  - {fileID: 757573868}
+  - {fileID: 757573868}
+  - {fileID: 757573868}
+  - {fileID: 1464884966}
+  - {fileID: 1464884966}
+  - {fileID: 1464884966}
+  - {fileID: 1239472385}
+  - {fileID: 68160002}
+  - {fileID: 292438000}
+  - {fileID: 2031105255}
+  - {fileID: 2031105255}
+  - {fileID: 2031105255}
 --- !u!114 &1301082967
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -59129,7 +59165,7 @@ GameObject:
   - 222: {fileID: 1464884967}
   - 114: {fileID: 1464884966}
   m_Layer: 5
-  m_Name: Gatekeeper Line 3
+  m_Name: Gatekeeper Line 4
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
