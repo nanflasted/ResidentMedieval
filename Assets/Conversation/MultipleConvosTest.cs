@@ -1,16 +1,15 @@
-// Leah Karasek
-
+﻿// Leah Karasek
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
 public class ConversationLoader : MonoBehaviour {
-
+	
 	public GameObject response1;
 	public GameObject response2;
 	public GameObject response3;
 	public GameObject npcResponse;
-		
+	
 	private int nextPlayerReponse;
 	private int nextNPCResponse;
 	private ConversationNode currentNode;
@@ -86,5 +85,5 @@ public class ConversationLoader : MonoBehaviour {
 			response3.SetActive(false);
 		}
 	}
-		
+	
 }
