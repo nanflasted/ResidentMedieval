@@ -2254,7 +2254,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!4 &64266679
 Transform:
   m_ObjectHideFlags: 0
@@ -12004,7 +12003,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!23 &349732376
 Renderer:
   m_ObjectHideFlags: 0
@@ -15055,7 +15053,7 @@ MonoBehaviour:
   attackAngle: 0
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
+  animControl: {fileID: 0}
 --- !u!195 &447227324
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -17629,7 +17627,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!195 &486384471
 NavMeshAgent:
   m_ObjectHideFlags: 0
@@ -23779,7 +23776,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!23 &663714416
 Renderer:
   m_ObjectHideFlags: 0
@@ -24292,7 +24288,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!23 &683204590
 Renderer:
   m_ObjectHideFlags: 0
@@ -36445,7 +36440,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!4 &1096925903
 Transform:
   m_ObjectHideFlags: 0
@@ -36785,7 +36779,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!23 &1103288494
 Renderer:
   m_ObjectHideFlags: 0
@@ -40832,7 +40825,6 @@ MonoBehaviour:
   attackAngle: 0
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
   dialogueCanvas: {fileID: 0}
   enterConversationButton: {fileID: 0}
   conversationDistance: 0
@@ -47019,7 +47011,7 @@ MonoBehaviour:
   attackAngle: 0
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
+  animControl: {fileID: 0}
 --- !u!23 &1391300964
 Renderer:
   m_ObjectHideFlags: 0
@@ -51917,7 +51909,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!23 &1533063660
 Renderer:
   m_ObjectHideFlags: 0
@@ -56263,7 +56254,6 @@ MonoBehaviour:
   attackAngle: 90
   battleManager: {fileID: 0}
   unitManager: {fileID: 1129209921}
-  anim: {fileID: 0}
 --- !u!4 &1650915745
 Transform:
   m_ObjectHideFlags: 0
