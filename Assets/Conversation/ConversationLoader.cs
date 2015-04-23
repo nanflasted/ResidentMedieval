@@ -14,14 +14,24 @@ public class ConversationLoader : MonoBehaviour {
 	private int nextPlayerReponse;
 	private int nextNPCResponse;
 	private ConversationNode currentNode;
-	private ConversationManager conversation;
+	private ConversationManager[] conversations;
+	private GameObject closestnpc;
 	
 	// Use this for initialization
 	void Start () {
 		// get the conversation manager, which holds the conversation, from the player
-		GameObject npc = GameObject.FindGameObjectWithTag("DialogueNPC");
-		Debug.Log(npc);
-		conversation = npc.GetComponent<ConversationManager>();
+		GameObject[] npcs = GameObject.FindGameObjectWithTag("DialogueNPC");
+		for (int i = 0; i < npcs.Length; i++) {
+			conversations[i] = npcs[i].GetComponent<ConversationManager>();
+		}
+		
+		int closestDist = 0;
+		for (int i = 0; i < npcs.Length; i++) {
+			if (Vector3.Distance (npcs[i].transform.position, gameObject.transform.position) <= closestDist) {
+				closestDist = Vector3.Distance (npcs[i].transform.position, gameObject.transform.position);
+			}
+			closestnpc = i;
+		}
 		
 		// fill in the initial reponses for the player and npc
 		LoadNewResponses(1);
@@ -51,7 +61,7 @@ public class ConversationLoader : MonoBehaviour {
 		response2.SetActive(true);
 		response3.SetActive(true);
 		// if there are no more conversation nodes, leave the conversation
-		if ((currentNode = conversation.AdvanceConversation ()) == null) {
+		if ((currentNode = conversations[closestnpc].AdvanceConversation ()) == null) {
 			Leave ();
 			return;
 		}
