@@ -31,7 +31,6 @@ public class Player : Friendly {
 		
 		// find the npc that can be talked to
 		GameObject npc = GameObject.FindGameObjectWithTag("DialogueNPC");
-		Debug.Log("npc: " + npc);
 		// display the enter conversation button
 		if (Vector3.Distance(npc.transform.position, gameObject.transform.position) <= conversationDistance && GameObject.Find("DialogueCanvas") == null) {
 			//Instantiate(enterConversationButton);
@@ -39,8 +38,14 @@ public class Player : Friendly {
 		}
 	}
 	
-	/*// if button is clicked, enter the conversation
+	/*
+	 * working on making the button do what it's supposed to - Leah 
+	// if button is clicked, enter the conversation
 	public void EnterConversation() {
+		Debug.Log ("clicked");
+		Destroy(enterConversationButton);
 		Instantiate(dialogueCanvas);
-	}*/
+	}
+	*/
+	
 }
