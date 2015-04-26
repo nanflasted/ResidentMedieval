@@ -1,9 +1,9 @@
 ﻿// Leah Karasek
-using UnityEngine;
+/*using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class ConversationLoader : MonoBehaviour {
+public class MultipleConvosTest : MonoBehaviour {
 	
 	public GameObject response1;
 	public GameObject response2;
@@ -86,4 +86,4 @@ public class ConversationLoader : MonoBehaviour {
 		}
 	}
 	
-}
+}*/

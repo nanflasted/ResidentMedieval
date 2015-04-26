@@ -1,4 +1,6 @@
-﻿using UnityEngine;
+﻿//For town text/exit game to work properly the final build must have the levels added in as listed below!
+
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 using UnityEditor;
@@ -98,7 +100,7 @@ public class HUDManagement : MonoBehaviour {
 	}
 
 	public void quitGame() {
-		Application.LoadLevel(4);
+		Application.LoadLevel(3);
 		//Debug.Log("Exit Game");
 	}
 }

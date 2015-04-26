@@ -3,7 +3,7 @@ using System.Collections;
 
 public class AnimationManager : MonoBehaviour {
 
-	public Player player;
+	public GameObject player;
 	// Use this for initialization
 	void Start () {
 		player.animation.Play ();
