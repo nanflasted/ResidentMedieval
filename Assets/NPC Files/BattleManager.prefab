@@ -203,7 +203,8 @@ MonoBehaviour:
   spawnPoints:
   - {fileID: 189140}
   spawnDelay: 2
-  units: []
+  units:
+  - {fileID: 0}
 --- !u!114 &11415882
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -215,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ad3aa3c587dde458f67547186ba3bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 11432590, guid: a7d651412ca17409d862448e326182eb, type: 2}
+  unitPrefab: {fileID: 11478842, guid: a7d651412ca17409d862448e326182eb, type: 2}
   spawnPoints:
   - {fileID: 154406}
   spawnDelay: 2

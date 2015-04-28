@@ -7,8 +7,8 @@ public class Player : Friendly {
 	public GameObject enterConversationButton;
 	public int conversationDistance;
 	
-	void Start () {
-		
+	new void Start () {
+
 	}
 	
 	

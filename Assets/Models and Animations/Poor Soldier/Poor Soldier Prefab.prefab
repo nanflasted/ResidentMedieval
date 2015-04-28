@@ -1132,7 +1132,7 @@ GameObject:
   - 114: {fileID: 11493942}
   m_Layer: 0
   m_Name: Poor Soldier Prefab
-  m_TagString: Untagged
+  m_TagString: Friendly
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1149,6 +1149,8 @@ GameObject:
   - 23: {fileID: 2393940}
   - 111: {fileID: 11193940}
   - 114: {fileID: 11493940}
+  - 65: {fileID: 6501138}
+  - 54: {fileID: 5413774}
   m_Layer: 0
   m_Name: Medieval Sword
   m_TagString: Untagged
@@ -2182,8 +2184,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 104146}
-  m_LocalRotation: {x: 0, y: -1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: .366778225, z: 0, w: .930308461}
+  m_LocalPosition: {x: 7.21000004, y: 8.05000019, z: 7.36000013}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 404144}
@@ -2312,6 +2314,33 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 193942}
   m_Mesh: {fileID: 4300000, guid: 8892890b81db6f343831cb1065788346, type: 3}
+--- !u!54 &5413774
+Rigidbody:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193940}
+  serializedVersion: 2
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: .0500000007
+  m_UseGravity: 1
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 0
+  m_CollisionDetection: 0
+--- !u!65 &6501138
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 193940}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 6.23377228, y: .853423238, z: .137552857}
+  m_Center: {x: 1.61105156, y: 3.89833394e-06, z: .0296155792}
 --- !u!95 &9503998
 Animator:
   serializedVersion: 3
@@ -2368,10 +2397,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   HUDmanager: {fileID: 0}
   health: 500
-  weapon: {fileID: 0}
+  weapon: {fileID: 11493940}
   agent: {fileID: 0}
-  attackDist: 3
-  attackAngle: 90
+  attackDist: 1.5
+  attackAngle: 60
   battleManager: {fileID: 0}
 --- !u!114 &11493940
 MonoBehaviour:
@@ -2384,7 +2413,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d7f110d095f784241b3d0bf4cc55abb7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 0
+  damage: 50
   wielder: {fileID: 11406004}
 --- !u!114 &11493942
 MonoBehaviour:
@@ -2412,9 +2441,9 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: .5
-  m_Height: 1
+  m_Height: 2
   m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!137 &13703998
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1

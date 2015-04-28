@@ -34,7 +34,7 @@ public class Enemy : Unit {
 		// attack if close enough to target
 		//Debug.Log (InRange(shortestDist));
 		if (InRange(shortestDist)) {
-			weapon.Swing(); 
+			transform.rotation = Quaternion.Euler(0, Quaternion.LookRotation(targets[num].transform.position - transform.position).eulerAngles.y, 0);
 			anim.SetBool ("Attack", true);// ANIMATION: attack
 			agent.Stop();
 			anim.SetFloat("Speed", 0f); // should set the walking speed as a fraction of the max move speed

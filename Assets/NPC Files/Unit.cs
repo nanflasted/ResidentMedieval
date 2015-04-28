@@ -17,13 +17,13 @@ public class Unit : MonoBehaviour {
 	public BattleManager battleManager;
 	protected Animator anim;
 	
-	void Start () {
+	public void Start () {
 		agent = GetComponent<NavMeshAgent>();	//Give it access to the NavMesh
 		anim = GetComponent<Animator>();
 	}
 
 	public bool InRange(Vector3 target) {
-		return (target.magnitude <= attackDist) && (Vector3.Angle(target, this.transform.forward) <= attackAngle);
+		return (target.magnitude <= attackDist)/* && (Vector3.Angle(target, this.transform.forward) <= attackAngle)*/;
 	}
 	
 	public void MoveTo(Unit target) {
