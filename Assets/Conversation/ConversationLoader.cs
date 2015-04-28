@@ -15,12 +15,18 @@ public class ConversationLoader : MonoBehaviour {
 	private int nextNPCResponse;
 	private ConversationNode currentNode;
 	private ConversationManager[] conversations;
-	private GameObject closestnpc;
+	private int closestNpcIndex;
+	private GameObject closestNpc;
+	
+	private GameObject playerCamera;
+	private int lockPlayer = 0;
+	private Vector3 playerPosition;
 	
 	// Use this for initialization
 	void Start () {
 		// get the conversation manager, which holds the conversation, from the player
 		GameObject[] npcs = GameObject.FindGameObjectsWithTag("DialogueNPC");
+		playerCamera = GameObject.FindGameObjectWithTag ("Player");
 		for (int i = 0; i < npcs.Length; i++) {
 			conversations[i] = npcs[i].GetComponent<ConversationManager>();
 			Debug.Log (npcs[i]);
@@ -31,7 +37,8 @@ public class ConversationLoader : MonoBehaviour {
 			if (Vector3.Distance (npcs[i].transform.position, gameObject.transform.position) <= closestDist) {
 				closestDist = Vector3.Distance (npcs[i].transform.position, gameObject.transform.position);
 			}
-			closestnpc = npcs[i];
+			closestNpcIndex = i;
+			closestNpc = npcs[i];
 		}
 		
 		// fill in the initial reponses for the player and npc
@@ -42,6 +49,8 @@ public class ConversationLoader : MonoBehaviour {
 	
 	// called when Leave Conversation is clicked
 	public void Leave() {
+		playerCamera.GetComponent<MouseLook>().enabled = true; //newline
+		lockPlayer = 0;
 		Destroy(gameObject);
 	}
 	
@@ -59,10 +68,15 @@ public class ConversationLoader : MonoBehaviour {
 	
 	// called when a response button is clicked
 	private void LoadNewResponses(int npcResponseNum) {
+		playerCamera.transform.LookAt (closestNpc.transform); 
+		lockPlayer = 1;  
+		playerCamera.GetComponent<MouseLook>().enabled = false;
+		
 		response2.SetActive(true);
 		response3.SetActive(true);
 		// if there are no more conversation nodes, leave the conversation
-		if ((currentNode = conversations[closestnpc].AdvanceConversation ()) == null) {
+		currentNode = conversations[closestNpcIndex].AdvanceConversation ();
+		if (currentNode == null) {
 			Leave ();
 			return;
 		}
