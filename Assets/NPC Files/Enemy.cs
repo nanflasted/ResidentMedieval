@@ -36,8 +36,7 @@ public class Enemy : Unit {
 		if (InRange(shortestDist)) {
 			weapon.Swing(); 
 			anim.SetBool ("Attack", true);// ANIMATION: attack
-			//agent.Stop();
-			agent.speed=0;
+			agent.Stop();
 			anim.SetFloat("Speed", 0f); // should set the walking speed as a fraction of the max move speed
 		} else if (num >= 0) {
 			//Move to the closest enemy if further than attackDist
