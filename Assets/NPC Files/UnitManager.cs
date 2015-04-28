@@ -14,7 +14,6 @@ public class UnitManager : MonoBehaviour {
 
 	// spawn units, waiting the specified amount of time after each
 	public IEnumerator SpawnUnits(int numUnits, BattleManager battleManager) {
-		Debug.Log("start");
 		for (int i = 0; i < numUnits; i++) {
 			SpawnUnit(numUnits, battleManager);
 			yield return new WaitForSeconds(spawnDelay);

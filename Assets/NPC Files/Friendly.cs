@@ -30,13 +30,20 @@ public class Friendly : Unit {
 
 		// attack if close enough to target
 		if (InRange(shortestDist)) {
-			weapon.Swing(); // ANIMATION: attack
-			agent.Stop();
+			weapon.Swing(); 
+			anim.SetBool ("Attack", true);// ANIMATION: attack
+			//agent.Stop();
+			agent.speed=0;
+			anim.SetFloat("Speed", 0f); // should set the walking speed as a fraction of the max move speed
+		} else if (num >= 0) {
+			//Move to the closest enemy if further than attackDist
+			anim.SetBool ("Attack", false);
+			MoveTo (targets[num]); 
+			anim.SetFloat("Speed", (agent.velocity.magnitude)/(agent.speed));// ANIMATION: walk/run
 		}
-		else if (num >= 0) {
-			MoveTo (targets[num]); // ANIMATION: walk/run
-		} else {
-			agent.Stop(); // ANIMATION: idle
+		else {
+			agent.Stop(); // ANIMATION: idle or whatever
+			anim.SetBool ("Attack", false);
 		}
 		
 		
