@@ -1,5 +1,5 @@
 // Leah Karasek
-/*
+
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
@@ -20,9 +20,10 @@ public class ConversationLoader : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		// get the conversation manager, which holds the conversation, from the player
-		GameObject[] npcs = GameObject.FindGameObjectWithTag("DialogueNPC");
+		GameObject[] npcs = GameObject.FindGameObjectsWithTag("DialogueNPC");
 		for (int i = 0; i < npcs.Length; i++) {
 			conversations[i] = npcs[i].GetComponent<ConversationManager>();
+			Debug.Log (npcs[i]);
 		}
 		
 		int closestDist = 0;
@@ -88,4 +89,3 @@ public class ConversationLoader : MonoBehaviour {
 	}
 		
 }
-*/
