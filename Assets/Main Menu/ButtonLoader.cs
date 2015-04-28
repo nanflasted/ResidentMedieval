@@ -2,13 +2,14 @@
 using System.Collections;
 
 public class ButtonLoader : MonoBehaviour {
-
+	public Camera cam;
 	public void ContinueGame()
 	{
 		//Application.LoadLevel (1);
 		Debug.Log ("continue game");
+		cam.audio.Play ();
 		Utilities.Load ();
-		audio.Play ();
+
 	}
 
 	//load screen
@@ -16,7 +17,9 @@ public class ButtonLoader : MonoBehaviour {
 	{
 		//Application.LoadLevel (2);
 		Debug.Log ("begin game");
-		audio.Play ();
+		cam.audio.Play ();
+		Application.LoadLevel(4);
+
 	}
 
 	public void LoadGame()
@@ -24,14 +27,14 @@ public class ButtonLoader : MonoBehaviour {
 		//Application.LoadLevel (3);
 		Debug.Log ("load game");
 
-		audio.Play ();
+		cam.audio.Play ();
 	}
 
 	public void DisplayOptions()
 	{
 		//Application.LoadLevel (4);
 		Debug.Log ("display options");
-		audio.Play ();
+		cam.audio.Play ();
 	}
 
 	public void ExitGame()
