@@ -32,13 +32,18 @@ public class SoldierAnimationControl : MonoBehaviour {
 	void Start () {
 		anim = GetComponent<Animator>();
 	
-		weapon.transform.parent = leftHip.transform; //weapons initialize on the hip, must be drawn
+		//sword
+		weapon.transform.parent = rightHand.transform; //weapons initialize in the hand
 		weapon.transform.localPosition = new Vector3(0,0,0);
 		weapon.transform.localRotation = Quaternion.identity;
+		isSwordDrawn = true;
+		
+		//shield
 		shield.transform.parent = leftForearm.transform; //shields initialize on the left arm
 		shield.transform.localPosition = new Vector3(0,0,0);
+		shield.transform.localRotation = Quaternion.identity;
 	
-		isSwordDrawn = false;
+		
 	}
 	
 	// Update is called once per frame
@@ -69,12 +74,14 @@ public class SoldierAnimationControl : MonoBehaviour {
 			weapon.transform.localPosition = new Vector3(0,0,0);
 		}
 		
-		if(Input.GetButton("Jump"))
-		{
-		  DrawSword(!isSwordDrawn);
-		}
+		
 	}
 	
+	
+	public void Attack(bool isAttacking){
+		anim.SetBool ("Attack", isAttacking);
+	
+	}
 	
 	public void DrawSword(bool drawSword){
 		isSwordDrawn = drawSword;
