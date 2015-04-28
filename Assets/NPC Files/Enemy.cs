@@ -5,13 +5,6 @@ using System.Collections.Generic;
 [RequireComponent(typeof (Animator))]
 public class Enemy : Unit {
 
-
-	private Animator anim;
-
-	void Start(){
-		anim = GetComponent<Animator>();
-	}
-
 	void Update () {
 		//Check for units that are friendlies or neutrals and add them to the array of units this unit cares about (filters out other enemies)
 		List<Unit> targetList = new List<Unit>();
@@ -47,10 +40,13 @@ public class Enemy : Unit {
 			agent.speed=0;
 			anim.SetFloat("Speed", agent.speed);
 		} else if (num >= 0) {
+			Debug.Log("else if");
 			//Move to the closest enemy if further than attackDist
 			anim.SetBool ("Attack", false);
 			MoveTo (targets[num]); 
+			Debug.Log("after move");
 			anim.SetFloat("Speed", agent.speed);// ANIMATION: walk/run
+			Debug.Log("end");
 		}
 		else {
 			agent.Stop(); // ANIMATION: idle or whatever
