@@ -26,7 +26,7 @@ public class ConversationLoader : MonoBehaviour {
 			Debug.Log (npcs[i]);
 		}
 		
-		int closestDist = 0;
+		float closestDist = 0;
 		for (int i = 0; i < npcs.Length; i++) {
 			if (Vector3.Distance (npcs[i].transform.position, gameObject.transform.position) <= closestDist) {
 				closestDist = Vector3.Distance (npcs[i].transform.position, gameObject.transform.position);
