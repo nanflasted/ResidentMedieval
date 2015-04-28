@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+using System.IO;
 public static class Utilities {
 
 	public static Vector3 parseV3(string input)//parse a vecter3d from string in order to load stuff
@@ -13,5 +13,24 @@ public static class Utilities {
 		output.z = float.Parse(split[2]);
 
 		return output;
+	}
+	public static void Save()
+	{
+		StreamWriter saver;
+
+		saver = new StreamWriter("save.dat");
+		saver.WriteLine(Application.loadedLevel);
+		saver.Close();
+	}
+	
+	public static void Load(){
+		StreamReader loader;
+		if (File.Exists("save.dat"))
+		{
+			loader = new StreamReader("save.dat");
+			int level = int.Parse(loader.ReadLine());
+			loader.Close();
+			Application.LoadLevel(level);
+		}
 	}
 }
