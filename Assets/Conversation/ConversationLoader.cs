@@ -31,7 +31,7 @@ public class ConversationLoader : MonoBehaviour {
 			if (Vector3.Distance (npcs[i].transform.position, gameObject.transform.position) <= closestDist) {
 				closestDist = Vector3.Distance (npcs[i].transform.position, gameObject.transform.position);
 			}
-			closestnpc = i;
+			closestnpc = npcs[i];
 		}
 		
 		// fill in the initial reponses for the player and npc
