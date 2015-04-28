@@ -7,6 +7,7 @@ public class ButtonLoader : MonoBehaviour {
 	{
 		//Application.LoadLevel (1);
 		Debug.Log ("continue game");
+		Utilities.Load ();
 		audio.Play ();
 	}
 
@@ -22,6 +23,7 @@ public class ButtonLoader : MonoBehaviour {
 	{
 		//Application.LoadLevel (3);
 		Debug.Log ("load game");
+
 		audio.Play ();
 	}
 
