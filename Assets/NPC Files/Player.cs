@@ -19,23 +19,13 @@ public class Player : Friendly {
 
 		isAttacking = weapon.GetComponent<Animator>().GetBool("Attacking");
 		
-		// find the npc that can be talked to
-		GameObject npc = GameObject.FindGameObjectWithTag("DialogueNPC");
-		// display the enter conversation button
-		if (npc != null && Vector3.Distance(npc.transform.position, gameObject.transform.position) <= conversationDistance && GameObject.FindGameObjectWithTag("DialogueCanvas") == null) {
-			//Instantiate(enterConversationButton);
-			Instantiate(dialogueCanvas);
+		// find the npcs that can be talked to
+		GameObject[] npcs = GameObject.FindGameObjectsWithTag("DialogueNPC");
+		for (int i = 0; i < npcs.Length; i++) {		
+			if (npcs[i] != null && Vector3.Distance(npcs[i].transform.position, gameObject.transform.position) <= conversationDistance && GameObject.FindGameObjectWithTag("DialogueCanvas") == null) {
+				Instantiate(dialogueCanvas);
+			}
 		}
 	}
-	
-	/*
-	 * working on making the button do what it's supposed to - Leah 
-	// if button is clicked, enter the conversation
-	public void EnterConversation() {
-		Debug.Log ("clicked");
-		Destroy(enterConversationButton);
-		Instantiate(dialogueCanvas);
-	}
-	*/
 	
 }

@@ -5,12 +5,12 @@ using System.Collections;
 using UnityEngine.UI;
 
 public class ConversationLoader : MonoBehaviour {
-
+	
 	public GameObject response1;
 	public GameObject response2;
 	public GameObject response3;
 	public GameObject npcResponse;
-		
+	
 	private int nextPlayerReponse;
 	private int nextNPCResponse;
 	private ConversationNode currentNode;
@@ -24,22 +24,31 @@ public class ConversationLoader : MonoBehaviour {
 	
 	// Use this for initialization
 	void Start () {
+		
 		// get the conversation manager, which holds the conversation, from the player
 		GameObject[] npcs = GameObject.FindGameObjectsWithTag("DialogueNPC");
+		// initialize the conversations array
+		conversations = new ConversationManager[npcs.Length];
+		// get the camera that belongs to the player
 		playerCamera = GameObject.FindGameObjectWithTag ("Player");
+		
 		for (int i = 0; i < npcs.Length; i++) {
 			conversations[i] = npcs[i].GetComponent<ConversationManager>();
-			Debug.Log (npcs[i]);
 		}
 		
-		float closestDist = 0;
+		float closestDist = 9999999;
 		for (int i = 0; i < npcs.Length; i++) {
 			if (Vector3.Distance (npcs[i].transform.position, gameObject.transform.position) <= closestDist) {
 				closestDist = Vector3.Distance (npcs[i].transform.position, gameObject.transform.position);
+				closestNpcIndex = i;
+				closestNpc = npcs[i];
 			}
-			closestNpcIndex = i;
-			closestNpc = npcs[i];
 		}
+				
+		// lock the camera on the npc
+		playerCamera.transform.LookAt (closestNpc.transform); 
+		lockPlayer = 1;  
+		playerCamera.GetComponent<MouseLook>().enabled = false;
 		
 		// fill in the initial reponses for the player and npc
 		LoadNewResponses(1);
@@ -68,10 +77,6 @@ public class ConversationLoader : MonoBehaviour {
 	
 	// called when a response button is clicked
 	private void LoadNewResponses(int npcResponseNum) {
-		playerCamera.transform.LookAt (closestNpc.transform); 
-		lockPlayer = 1;  
-		playerCamera.GetComponent<MouseLook>().enabled = false;
-		
 		response2.SetActive(true);
 		response3.SetActive(true);
 		// if there are no more conversation nodes, leave the conversation
@@ -80,6 +85,7 @@ public class ConversationLoader : MonoBehaviour {
 			Leave ();
 			return;
 		}
+		Debug.Log ("npc response: " + currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text);
 		
 		// otherwise, load new responses from the currentNode
 		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text;
@@ -101,5 +107,5 @@ public class ConversationLoader : MonoBehaviour {
 			response3.SetActive(false);
 		}
 	}
-		
+	
 }
