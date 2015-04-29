@@ -32,6 +32,7 @@ public class Neutral : Unit {
 			agent.SetDestination(opposite); // ANIMATION: walk/run
 		} else {
 			agent.Stop(); // ANIMATION: idle
+			anim.SetFloat("Speed", 0f);
 		}
 	}
 }

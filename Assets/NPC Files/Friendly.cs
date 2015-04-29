@@ -48,6 +48,7 @@ public class Friendly : Unit {
 		}
 		else {
 			agent.Stop(); // ANIMATION: idle or whatever
+			anim.SetFloat("Speed", 0f);
 			Attack(false);
 		}
 		
