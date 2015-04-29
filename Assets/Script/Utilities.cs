@@ -20,6 +20,7 @@ public static class Utilities {
 
 		saver = new StreamWriter("save.dat");
 		saver.WriteLine(Application.loadedLevel);
+		Debug.Log (Application.loadedLevel);
 		saver.Close();
 	}
 	
