@@ -63,17 +63,17 @@ LightmapSettings:
 NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    agentRadius: .5
+    agentRadius: .200000003
     agentHeight: 2
-    agentSlope: 45
-    agentClimb: .400000006
+    agentSlope: 71.0999985
+    agentClimb: 1.5
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-  m_NavMesh: {fileID: 0}
+  m_NavMesh: {fileID: 19400000, guid: 5ccbae37f12a13b4c96e4b69b34b0708, type: 2}
 --- !u!1 &4028789
 GameObject:
   m_ObjectHideFlags: 0
@@ -2199,6 +2199,7 @@ MonoBehaviour:
   agent: {fileID: 0}
   attackDist: 0
   attackAngle: 0
+  isAttacking: 0
   battleManager: {fileID: 0}
   dialogueCanvas: {fileID: 162810, guid: ecde71bfbf22a486ea4f45978475ce14, type: 2}
   enterConversationButton: {fileID: 185738, guid: 1291486a7898e48b6aeb1fe16316da3a,
