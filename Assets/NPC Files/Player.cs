@@ -16,10 +16,8 @@ public class Player : Friendly {
 		if (Input.GetButtonDown("Fire1")) {
 			weapon.Swing();
 		}
-		
-		if (Input.GetButtonDown("Fire1")) {
-			weapon.Swing();
-		}
+
+		isAttacking = weapon.GetComponent<Animator>().GetBool("Attacking");
 		
 		// find the npc that can be talked to
 		GameObject npc = GameObject.FindGameObjectWithTag("DialogueNPC");
