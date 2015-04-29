@@ -14,6 +14,7 @@ public class Unit : MonoBehaviour {
 	public NavMeshAgent agent;
 	public float attackDist; // minimum distance at which the unit will start attacking
 	public float attackAngle; // minimum angle from the opponent at which the unit will start swinging
+	public bool isAttacking = false;
 	public BattleManager battleManager;
 	protected Animator anim;
 	
@@ -28,11 +29,6 @@ public class Unit : MonoBehaviour {
 	
 	public void MoveTo(Unit target) {
 		agent.SetDestination(target.transform.position);	//Move to the position of a specific unit
-	}
-
-	// an Attack() command has been sent, swing the weapon
-	protected void Attack () {
-		weapon.Swing();
 	}
 
 	// damages this unit

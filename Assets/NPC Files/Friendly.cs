@@ -36,25 +36,29 @@ public class Friendly : Unit {
 
 		// attack if close enough to target
 		if (InRange(shortestDist)) {
-			transform.rotation = Quaternion.Euler(0, Quaternion.LookRotation(targets[num].transform.position - transform.position).eulerAngles.y, 0);
-			controller.Attack(true);// ANIMATION: attack
+			transform.rotation = Quaternion.Euler(0, (Quaternion.LookRotation(targets[num].transform.position - transform.position).eulerAngles.y + 60) % 360, 0);
+			Attack(true);// ANIMATION: attack
 			agent.Stop();
 			anim.SetFloat("Speed", 0f); // should set the walking speed as a fraction of the max move speed
 		} else if (num >= 0) {
 			//Move to the closest enemy if further than attackDist
-			controller.Attack(false);
+			Attack(false);
 			MoveTo (targets[num]);
 			anim.SetFloat("Speed", (agent.velocity.magnitude)/(agent.speed));// ANIMATION: walk/run
 		}
 		else {
 			agent.Stop(); // ANIMATION: idle or whatever
-			controller.Attack(false);
+			Attack(false);
 		}
 		
 		
 		
 	}
-	
+
+	public void Attack(bool value) {
+		isAttacking = value;
+		controller.Attack(value);
+	}
 	
 	public void DrawSword(){
 		

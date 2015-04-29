@@ -35,18 +35,23 @@ public class Enemy : Unit {
 		//Debug.Log (InRange(shortestDist));
 		if (InRange(shortestDist)) {
 			transform.rotation = Quaternion.Euler(0, Quaternion.LookRotation(targets[num].transform.position - transform.position).eulerAngles.y, 0);
-			anim.SetBool ("Attack", true);// ANIMATION: attack
+			Attack(true);// ANIMATION: attack
 			agent.Stop();
 			anim.SetFloat("Speed", 0f); // should set the walking speed as a fraction of the max move speed
 		} else if (num >= 0) {
 			//Move to the closest enemy if further than attackDist
-			anim.SetBool ("Attack", false);
+			Attack(false);
 			MoveTo (targets[num]); 
 			anim.SetFloat("Speed", (agent.velocity.magnitude)/(agent.speed));// ANIMATION: walk/run
 		}
 		else {
 			agent.Stop(); // ANIMATION: idle or whatever
-			anim.SetBool ("Attack", false);
+			Attack(false);
 		}
+	}
+
+	public void Attack(bool value) {
+		isAttacking = value;
+		anim.SetBool("Attack", value);
 	}
 }
