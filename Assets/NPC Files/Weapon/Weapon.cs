@@ -11,7 +11,7 @@ public class Weapon : MonoBehaviour {
 	}
 
 	public void Swing() {
-		GetComponent<Animator>().SetTrigger("Attack");
+		GetComponent<Animator>().SetTrigger("Attacking");
 	}
 
 	// if the weapon hits something
