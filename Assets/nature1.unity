@@ -4976,7 +4976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02ad3aa3c587dde458f67547186ba3bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  unitPrefab: {fileID: 11432590, guid: a7d651412ca17409d862448e326182eb, type: 2}
+  unitPrefab: {fileID: 11478842, guid: a7d651412ca17409d862448e326182eb, type: 2}
   spawnPoints:
   - {fileID: 900545896}
   spawnDelay: 8
@@ -8642,6 +8642,7 @@ GameObject:
   - 92: {fileID: 2024064040}
   - 124: {fileID: 2024064039}
   - 81: {fileID: 2024064038}
+  - 45: {fileID: 2024064043}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -8718,6 +8719,14 @@ Transform:
   m_Children: []
   m_Father: {fileID: 461242349}
   m_RootOrder: 0
+--- !u!45 &2024064043
+Skybox:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2024064037}
+  m_Enabled: 1
+  m_CustomSkybox: {fileID: 2100000, guid: a2126534b3a11b34e977105bd9e3cc03, type: 2}
 --- !u!1 &2031601243
 GameObject:
   m_ObjectHideFlags: 0
