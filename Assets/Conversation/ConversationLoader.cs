@@ -23,6 +23,14 @@ public class ConversationLoader : MonoBehaviour {
 	private Vector3 playerPosition;
 	
 	// Use this for initialization
+	void Update() {
+		if (lockPlayer == 1) {
+			playerCamera.transform.LookAt (closestNpc.transform); 
+			//put something that would lock the player in place here
+			//I couldnt turn off the component nor lock their position. Tried multiple ways.
+		}
+	}
+
 	void Start () {
 		// get the conversation manager, which holds the conversation, from the player
 		GameObject[] npcs = GameObject.FindGameObjectsWithTag("DialogueNPC");
@@ -68,7 +76,6 @@ public class ConversationLoader : MonoBehaviour {
 	
 	// called when a response button is clicked
 	private void LoadNewResponses(int npcResponseNum) {
-		playerCamera.transform.LookAt (closestNpc.transform); 
 		lockPlayer = 1;  
 		playerCamera.GetComponent<MouseLook>().enabled = false;
 		
