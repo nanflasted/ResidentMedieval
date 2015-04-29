@@ -5,7 +5,7 @@ using System.Collections;
 
 public class Neutral : Unit {
 	
-	public NPCAnimationControl animControl;
+	
 	
 	void Update () {
 		//Check for units that are enemies and add them to the array of units this unit cares about (filters out other neutrals and friendlies)
@@ -30,8 +30,10 @@ public class Neutral : Unit {
 			//Create a fake unit in the opposite direction of the closest unit and run towards that fake unit
 			Vector3 opposite = new Vector3(this.transform.position.x - shortestDist.x * 2, 0, this.transform.position.z - shortestDist.z * 2);
 			agent.SetDestination(opposite); // ANIMATION: walk/run
+			anim.SetFloat("Speed", (agent.velocity.magnitude)/(agent.speed));
 		} else {
 			agent.Stop(); // ANIMATION: idle
+			anim.SetFloat("Speed", 0F);
 		}
 	}
 }

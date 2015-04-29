@@ -69,6 +69,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 418932}
   - 95: {fileID: 9518924}
+  - 114: {fileID: 11402492}
+  - 195: {fileID: 19502492}
   m_Layer: 0
   m_Name: Rich Woman Prefab
   m_TagString: Untagged
@@ -1174,7 +1176,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 118932}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 2.60038853, y: -2.81553421e-17, z: 1.26800394}
+  m_LocalPosition: {x: 59.6483841, y: 7.12101936, z: -11.8250561}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 418974}
@@ -2093,6 +2095,25 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &11402492
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118932}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
 --- !u!137 &13718924
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
@@ -2529,6 +2550,26 @@ SkinnedMeshRenderer:
     m_Center: {x: 9.79378819e-06, y: .0638857484, z: .0928445309}
     m_Extent: {x: .0476023592, y: .0169503093, z: .0168681368}
   m_DirtyAABB: 0
+--- !u!195 &19502492
+NavMeshAgent:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 118932}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
