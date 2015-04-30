@@ -1,9 +1,9 @@
-﻿// Leah Karasek
-/*using UnityEngine;
+﻿/*
+using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
 
-public class MultipleConvosTest : MonoBehaviour {
+public class ConversationLoader : MonoBehaviour {
 	
 	public GameObject response1;
 	public GameObject response2;
@@ -14,32 +14,50 @@ public class MultipleConvosTest : MonoBehaviour {
 	private int nextNPCResponse;
 	private ConversationNode currentNode;
 	private ConversationManager[] conversations;
-	private GameObject closestnpc;
+	private int closestNpcIndex;
+	private GameObject closestNpc;
+	
+	private GameObject playerCamera;
+	private int lockPlayer = 0;
+	private Vector3 playerPosition;
 	
 	// Use this for initialization
 	void Start () {
+		
 		// get the conversation manager, which holds the conversation, from the player
-		GameObject[] npcs = GameObject.FindGameObjectWithTag("DialogueNPC");
+		GameObject[] npcs = GameObject.FindGameObjectsWithTag("DialogueNPC");
+		// initialize the conversations array
+		conversations = new ConversationManager[npcs.Length];
+		// get the camera that belongs to the player
+		playerCamera = GameObject.FindGameObjectWithTag ("Player");
+		
 		for (int i = 0; i < npcs.Length; i++) {
 			conversations[i] = npcs[i].GetComponent<ConversationManager>();
 		}
 		
-		int closestDist = 0;
+		float closestDist = 9999999;
 		for (int i = 0; i < npcs.Length; i++) {
 			if (Vector3.Distance (npcs[i].transform.position, gameObject.transform.position) <= closestDist) {
 				closestDist = Vector3.Distance (npcs[i].transform.position, gameObject.transform.position);
+				closestNpcIndex = i;
+				closestNpc = npcs[i];
 			}
-			closestnpc = i;
 		}
+		
+		// lock the camera on the npc
+		playerCamera.transform.LookAt (closestNpc.transform); 
+		lockPlayer = 1;  
+		playerCamera.GetComponent<MouseLook>().enabled = false;
 		
 		// fill in the initial reponses for the player and npc
 		LoadNewResponses(1);
 		
-		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(1).GetComponent<Text>().text;
 	}	
 	
 	// called when Leave Conversation is clicked
 	public void Leave() {
+		playerCamera.GetComponent<MouseLook>().enabled = true; //newline
+		lockPlayer = 0;
 		Destroy(gameObject);
 	}
 	
@@ -60,13 +78,16 @@ public class MultipleConvosTest : MonoBehaviour {
 		response2.SetActive(true);
 		response3.SetActive(true);
 		// if there are no more conversation nodes, leave the conversation
-		if ((currentNode = conversations[closestnpc].AdvanceConversation ()) == null) {
+		Debug.Log (conversations[closestNpcIndex].AdvanceConversation().GetNpcResponses(1));
+		currentNode = conversations[closestNpcIndex].AdvanceConversation ();
+		if (currentNode == null) {
 			Leave ();
 			return;
 		}
-		
+		Debug.Log ("npc response: " + npcResponseNum);
+		Debug.Log ("in conversation");	
 		// otherwise, load new responses from the currentNode
-		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text;
+		npcResponse.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text;
 		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
 		// if response 2 is the same as 1, 1 is the only possible response, so set the other two inactive
 		if (currentNode.GetPlayerResponse(2).GetComponent<Text>().text != response1.transform.FindChild("Text").GetComponent<Text>().text) {
