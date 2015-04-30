@@ -31,6 +31,10 @@ public class HUDManagement : MonoBehaviour {
 			scene = "Wilderness";
 		} else if (level == 3) {
 			scene = "House";
+		} else if (level == 6) {
+			scene = "Wilderness";
+		} else if (level == 7) {
+			scene = "Umbreland";
 		} else {
 			scene = "you broke something";
 		}
@@ -55,6 +59,10 @@ public class HUDManagement : MonoBehaviour {
 			scene = "Wilderness";
 		} else if (level == 3) {
 			scene = "House";
+		} else if (level == 6) {
+			scene = "Wilderness";
+		} else if (level == 7) {
+			scene = "Umbreland";
 		} else {
 			scene = "you broke something";
 		}
