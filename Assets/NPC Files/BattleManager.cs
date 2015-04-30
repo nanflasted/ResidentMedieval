@@ -22,6 +22,7 @@ public class BattleManager : MonoBehaviour {
 	
 	// check if one of the sides doesn't have any more combatants
 	void Update () {
+	/**
 		if (inProgress == true) {
 			if (friendlyManager.units.Count == 0) {
 				Debug.Log ("You lost the battle!");
@@ -31,5 +32,6 @@ public class BattleManager : MonoBehaviour {
 				inProgress = false;
 			}
 		}
+		*/
 	}
 }
