@@ -7523,7 +7523,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: .1953125, g: .1953125, b: .1953125, a: 1}
+  m_Color: {r: 0, g: 0, b: 0, a: .97647059}
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
     m_FontSize: 14
@@ -20505,7 +20505,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &343308782
 RectTransform:
   m_ObjectHideFlags: 0
@@ -75470,7 +75470,7 @@ Transform:
   m_PrefabInternal: {fileID: 1597681454}
   m_GameObject: {fileID: 1469825537}
   m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
-  m_LocalPosition: {x: 378, y: 1, z: 355}
+  m_LocalPosition: {x: 378, y: -2.86999989, z: 355}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 183126049}
@@ -82686,7 +82686,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 470324, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 1
+      value: -2.86999989
       objectReference: {fileID: 0}
     - target: {fileID: 470324, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c, type: 2}
       propertyPath: m_LocalPosition.z
