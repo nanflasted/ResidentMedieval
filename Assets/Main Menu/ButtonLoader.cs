@@ -39,7 +39,7 @@ public class ButtonLoader : MonoBehaviour {
 
 	public void ExitGame()
 	{
-		//Application.Quit ();
+		Application.Quit ();
 		Debug.Log ("exit game");
 	}
 }

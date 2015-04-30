@@ -3,7 +3,7 @@
 using UnityEngine;
 using System.Collections;
 using UnityEngine.UI;
-using UnityEditor;
+//using UnityEditor;
 
 public class HUDManagement : MonoBehaviour {
 
@@ -23,13 +23,13 @@ public class HUDManagement : MonoBehaviour {
 		healthBar.value = player.health / 100;	//check units (player health might need rescaling)
 		//scene = EditorApplication.currentScene;
 		level = Application.loadedLevel;
-		if (level == 0) {
+		if (level == 3) {
 			scene = "Mocpack";
 		} else if (level == 1) {
 			scene = "Umbreland";
 		} else if (level == 2) {
 			scene = "Wilderness";
-		} else if (level == 3) {
+		} else if (level == 4) {
 			scene = "House";
 		} else if (level == 6) {
 			scene = "Wilderness";
@@ -51,13 +51,13 @@ public class HUDManagement : MonoBehaviour {
 	void Update () {
 
 		level = Application.loadedLevel;
-		if (level == 0) {
+		if (level == 3) {
 			scene = "Mocpack";
 		} else if (level == 1) {
 			scene = "Umbreland";
 		} else if (level == 2) {
 			scene = "Wilderness";
-		} else if (level == 3) {
+		} else if (level == 4) {
 			scene = "House";
 		} else if (level == 6) {
 			scene = "Wilderness";
@@ -108,7 +108,7 @@ public class HUDManagement : MonoBehaviour {
 	}
 
 	public void quitGame() {
-		Application.LoadLevel(3);
+		Application.LoadLevel(0);
 		//Debug.Log("Exit Game");
 	}
 }

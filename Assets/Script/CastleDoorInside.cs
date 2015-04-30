@@ -14,6 +14,6 @@ public class CastleDoorInside : MonoBehaviour {
 		GameObject.FindGameObjectWithTag("ST").GetComponent<Fading>().currentDestination = "playerdooroutside";
 		float fadeTime = GameObject.FindGameObjectWithTag("ST").GetComponent<Fading>().BeginFade(1);
 		yield return new WaitForSeconds(fadeTime);
-		Application.LoadLevel(0);	
+		Application.LoadLevel(3);	
 	}
 }
