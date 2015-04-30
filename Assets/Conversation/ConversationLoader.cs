@@ -44,9 +44,7 @@ public class ConversationLoader : MonoBehaviour {
 				closestNpc = npcs[i];
 			}
 		}
-		
-		Debug.Log (closestNpc);
-		
+				
 		// lock the camera on the npc
 		playerCamera.transform.LookAt (closestNpc.transform); 
 		lockPlayer = 1;  
@@ -55,7 +53,7 @@ public class ConversationLoader : MonoBehaviour {
 		// fill in the initial reponses for the player and npc
 		LoadNewResponses(1);
 		
-		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(1).GetComponent<Text>().text;
+		//npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(1).GetComponent<Text>().text;
 	}	
 	
 	// called when Leave Conversation is clicked

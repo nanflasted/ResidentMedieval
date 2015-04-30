@@ -19,6 +19,7 @@ public class Player : Friendly {
 
 		isAttacking = weapon.GetComponent<Animator>().GetBool("Attacking");
 		
+		
 		// find the npcs that can be talked to
 		GameObject[] npcs = GameObject.FindGameObjectsWithTag("DialogueNPC");
 		for (int i = 0; i < npcs.Length; i++) {		
