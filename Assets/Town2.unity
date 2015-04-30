@@ -19258,6 +19258,8 @@ GameObject:
   - 95: {fileID: 328748512}
   - 114: {fileID: 328748513}
   - 114: {fileID: 328748514}
+  - 195: {fileID: 328748516}
+  - 114: {fileID: 328748515}
   m_Layer: 0
   m_Name: Poor Man Prefab
   m_TagString: DialogueNPC
@@ -19365,6 +19367,48 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &328748515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11490798, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 966522903}
+  m_GameObject: {fileID: 328748510}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
+--- !u!195 &328748516
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19515294, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 966522903}
+  m_GameObject: {fileID: 328748510}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
 --- !u!1 &328925384
 GameObject:
   m_ObjectHideFlags: 0
@@ -19988,7 +20032,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &337433252
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -53693,6 +53737,8 @@ GameObject:
   - 95: {fileID: 1010562450}
   - 114: {fileID: 1010562451}
   - 114: {fileID: 1010562452}
+  - 195: {fileID: 1010562454}
+  - 114: {fileID: 1010562453}
   m_Layer: 0
   m_Name: Poor Man Prefab
   m_TagString: DialogueNPC
@@ -53800,6 +53846,48 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &1010562453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11490798, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1362015643}
+  m_GameObject: {fileID: 1010562448}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
+--- !u!195 &1010562454
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19515294, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1362015643}
+  m_GameObject: {fileID: 1010562448}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
 --- !u!1001 &1010876126
 Prefab:
   m_ObjectHideFlags: 0
@@ -61685,6 +61773,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1180840728}
   - 95: {fileID: 1180840729}
+  - 114: {fileID: 1180840731}
+  - 195: {fileID: 1180840730}
   m_Layer: 0
   m_Name: Poor Woman Prefab
   m_TagString: Untagged
@@ -61727,6 +61817,48 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!195 &1180840730
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19540620, guid: 5e560874e976a45bbaffded1ff0fd034,
+    type: 2}
+  m_PrefabInternal: {fileID: 1599010423}
+  m_GameObject: {fileID: 1180840727}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &1180840731
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11426988, guid: 5e560874e976a45bbaffded1ff0fd034,
+    type: 2}
+  m_PrefabInternal: {fileID: 1599010423}
+  m_GameObject: {fileID: 1180840727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
 --- !u!1 &1182236936
 GameObject:
   m_ObjectHideFlags: 0
@@ -68940,6 +69072,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1347011194}
   - 95: {fileID: 1347011195}
+  - 114: {fileID: 1347011197}
+  - 195: {fileID: 1347011196}
   m_Layer: 0
   m_Name: Poor Woman Prefab
   m_TagString: Untagged
@@ -68982,6 +69116,48 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!195 &1347011196
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19540620, guid: 5e560874e976a45bbaffded1ff0fd034,
+    type: 2}
+  m_PrefabInternal: {fileID: 658964844}
+  m_GameObject: {fileID: 1347011193}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &1347011197
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11426988, guid: 5e560874e976a45bbaffded1ff0fd034,
+    type: 2}
+  m_PrefabInternal: {fileID: 658964844}
+  m_GameObject: {fileID: 1347011193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
 --- !u!1 &1347272020
 GameObject:
   m_ObjectHideFlags: 0
@@ -73407,6 +73583,8 @@ GameObject:
   - 95: {fileID: 1433388107}
   - 114: {fileID: 1433388108}
   - 114: {fileID: 1433388109}
+  - 195: {fileID: 1433388111}
+  - 114: {fileID: 1433388110}
   m_Layer: 0
   m_Name: Poor Man Prefab
   m_TagString: DialogueNPC
@@ -73514,6 +73692,48 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &1433388110
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11490798, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 112632136}
+  m_GameObject: {fileID: 1433388105}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
+--- !u!195 &1433388111
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19515294, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 112632136}
+  m_GameObject: {fileID: 1433388105}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
 --- !u!1 &1436106338
 GameObject:
   m_ObjectHideFlags: 0
@@ -75262,6 +75482,8 @@ GameObject:
   - 95: {fileID: 1469825541}
   - 114: {fileID: 1469825540}
   - 114: {fileID: 1469825539}
+  - 195: {fileID: 1469825543}
+  - 114: {fileID: 1469825542}
   m_Layer: 0
   m_Name: Gatekeeper Lvl 4
   m_TagString: DialogueNPC
@@ -75369,6 +75591,48 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1469825542
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11490798, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1597681454}
+  m_GameObject: {fileID: 1469825537}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
+--- !u!195 &1469825543
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19515294, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1597681454}
+  m_GameObject: {fileID: 1469825537}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
 --- !u!1 &1470897716
 GameObject:
   m_ObjectHideFlags: 0
@@ -77760,6 +78024,8 @@ GameObject:
   - 95: {fileID: 1521888498}
   - 114: {fileID: 1521888499}
   - 114: {fileID: 1521888500}
+  - 195: {fileID: 1521888502}
+  - 114: {fileID: 1521888501}
   m_Layer: 0
   m_Name: Poor Man Prefab
   m_TagString: DialogueNPC
@@ -77867,6 +78133,48 @@ MonoBehaviour:
   - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
+--- !u!114 &1521888501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11490798, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1755119932}
+  m_GameObject: {fileID: 1521888496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
+--- !u!195 &1521888502
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19515294, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1755119932}
+  m_GameObject: {fileID: 1521888496}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
 --- !u!1 &1522071299
 GameObject:
   m_ObjectHideFlags: 0
@@ -80516,6 +80824,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 1567414984}
   - 95: {fileID: 1567414985}
+  - 114: {fileID: 1567414987}
+  - 195: {fileID: 1567414986}
   m_Layer: 0
   m_Name: Poor Woman Prefab
   m_TagString: Untagged
@@ -80558,6 +80868,48 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!195 &1567414986
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19540620, guid: 5e560874e976a45bbaffded1ff0fd034,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536315782}
+  m_GameObject: {fileID: 1567414983}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &1567414987
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11426988, guid: 5e560874e976a45bbaffded1ff0fd034,
+    type: 2}
+  m_PrefabInternal: {fileID: 1536315782}
+  m_GameObject: {fileID: 1567414983}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
 --- !u!1 &1567874085
 GameObject:
   m_ObjectHideFlags: 0
@@ -100504,6 +100856,8 @@ GameObject:
   - 95: {fileID: 1919400747}
   - 114: {fileID: 1919400746}
   - 114: {fileID: 1919400745}
+  - 195: {fileID: 1919400749}
+  - 114: {fileID: 1919400748}
   m_Layer: 0
   m_Name: Gatekeeper Lvl 4
   m_TagString: DialogueNPC
@@ -100611,6 +100965,48 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!114 &1919400748
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11490798, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1424700460}
+  m_GameObject: {fileID: 1919400743}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
+--- !u!195 &1919400749
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19515294, guid: 48229ea5d6d8f4cd4ad6f7f32ac2ac9c,
+    type: 2}
+  m_PrefabInternal: {fileID: 1424700460}
+  m_GameObject: {fileID: 1919400743}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
 --- !u!1 &1921105340
 GameObject:
   m_ObjectHideFlags: 0
@@ -107731,6 +108127,8 @@ GameObject:
   m_Component:
   - 4: {fileID: 2049063986}
   - 95: {fileID: 2049063987}
+  - 114: {fileID: 2049063989}
+  - 195: {fileID: 2049063988}
   m_Layer: 0
   m_Name: Poor Woman Prefab
   m_TagString: Untagged
@@ -107773,6 +108171,48 @@ Animator:
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
+--- !u!195 &2049063988
+NavMeshAgent:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 19540620, guid: 5e560874e976a45bbaffded1ff0fd034,
+    type: 2}
+  m_PrefabInternal: {fileID: 671042736}
+  m_GameObject: {fileID: 2049063985}
+  m_Enabled: 1
+  m_Radius: .5
+  m_Speed: 3.5
+  m_Acceleration: 8
+  avoidancePriority: 50
+  m_AngularSpeed: 120
+  m_StoppingDistance: 0
+  m_AutoTraverseOffMeshLink: 1
+  m_AutoBraking: 1
+  m_AutoRepath: 1
+  m_Height: 2
+  m_BaseOffset: 0
+  m_WalkableMask: 4294967295
+  m_ObstacleAvoidanceType: 1
+--- !u!114 &2049063989
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11426988, guid: 5e560874e976a45bbaffded1ff0fd034,
+    type: 2}
+  m_PrefabInternal: {fileID: 671042736}
+  m_GameObject: {fileID: 2049063985}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d985d90d86e1ecc4aabdd0fd0c65a727, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  HUDmanager: {fileID: 0}
+  health: 300
+  weapon: {fileID: 0}
+  agent: {fileID: 0}
+  attackDist: 0
+  attackAngle: 0
+  isAttacking: 0
+  battleManager: {fileID: 0}
+  animControl: {fileID: 0}
 --- !u!1 &2049933697
 GameObject:
   m_ObjectHideFlags: 0
