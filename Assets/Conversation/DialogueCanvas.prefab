@@ -11,7 +11,7 @@ GameObject:
   - 222: {fileID: 22262786}
   - 114: {fileID: 11462786}
   m_Layer: 5
-  m_Name: DialogueText
+  m_Name: Text
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -682,7 +682,7 @@ MonoBehaviour:
   response1: {fileID: 162788}
   response2: {fileID: 162808}
   response3: {fileID: 162806}
-  npcResponse: {fileID: 162786}
+  npcResponse: {fileID: 162790}
 --- !u!114 &11462826
 MonoBehaviour:
   m_ObjectHideFlags: 1

@@ -44,16 +44,15 @@ public class ConversationLoader : MonoBehaviour {
 				closestNpc = npcs[i];
 			}
 		}
-				
+						
 		// lock the camera on the npc
 		playerCamera.transform.LookAt (closestNpc.transform); 
 		lockPlayer = 1;  
 		playerCamera.GetComponent<MouseLook>().enabled = false;
-		
+				
 		// fill in the initial reponses for the player and npc
 		LoadNewResponses(1);
 		
-		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(1).GetComponent<Text>().text;
 	}	
 	
 	// called when Leave Conversation is clicked
@@ -80,15 +79,16 @@ public class ConversationLoader : MonoBehaviour {
 		response2.SetActive(true);
 		response3.SetActive(true);
 		// if there are no more conversation nodes, leave the conversation
+		Debug.Log (conversations[closestNpcIndex].AdvanceConversation().GetNpcResponses(1));
 		currentNode = conversations[closestNpcIndex].AdvanceConversation ();
 		if (currentNode == null) {
 			Leave ();
 			return;
 		}
-		Debug.Log ("npc response: " + currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text);
-		
+		Debug.Log ("npc response: " + npcResponseNum);
+		Debug.Log ("in conversation");	
 		// otherwise, load new responses from the currentNode
-		npcResponse.transform.GetComponent<Text>().text = currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text;
+		npcResponse.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetNpcResponses(npcResponseNum).GetComponent<Text>().text;
 		response1.transform.FindChild("Text").GetComponent<Text>().text = currentNode.GetPlayerResponse(1).GetComponent<Text>().text;
 		// if response 2 is the same as 1, 1 is the only possible response, so set the other two inactive
 		if (currentNode.GetPlayerResponse(2).GetComponent<Text>().text != response1.transform.FindChild("Text").GetComponent<Text>().text) {

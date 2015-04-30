@@ -2097,8 +2097,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 170324}
-  m_LocalRotation: {x: 0, y: -.0342625007, z: 0, w: .999412894}
-  m_LocalPosition: {x: 23.6446838, y: 7.12101936, z: 9.57121468}
+  m_LocalRotation: {x: 0, y: 1, z: 0, w: -1.62920685e-07}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 470322}
@@ -2207,6 +2207,7 @@ MonoBehaviour:
   attackAngle: 0
   isAttacking: 0
   battleManager: {fileID: 0}
+  animControl: {fileID: 0}
 --- !u!137 &13770176
 SkinnedMeshRenderer:
   m_ObjectHideFlags: 1
