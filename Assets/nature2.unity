@@ -63,17 +63,17 @@ LightmapSettings:
 NavMeshSettings:
   m_ObjectHideFlags: 0
   m_BuildSettings:
-    agentRadius: .5
+    agentRadius: .100000001
     agentHeight: 2
-    agentSlope: 45
-    agentClimb: .400000006
+    agentSlope: 48.5999985
+    agentClimb: 1
     ledgeDropHeight: 0
     maxJumpAcrossDistance: 0
     accuratePlacement: 0
     minRegionArea: 2
     widthInaccuracy: 16.666666
     heightInaccuracy: 10
-  m_NavMesh: {fileID: 0}
+  m_NavMesh: {fileID: 19400000, guid: 819c96061213fd64491948c6dd5044cb, type: 2}
 --- !u!1 &4028789
 GameObject:
   m_ObjectHideFlags: 0
