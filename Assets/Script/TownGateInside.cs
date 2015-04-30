@@ -15,6 +15,6 @@ public class TownGateInside : MonoBehaviour {
 		GameObject.FindGameObjectWithTag("ST").GetComponent<Fading>().currentDestination = "towngateoutside";
 		float fadeTime = GameObject.FindGameObjectWithTag("ST").GetComponent<Fading>().BeginFade(1);
 		yield return new WaitForSeconds(fadeTime);
-		Application.LoadLevel(2);	
+		Application.LoadLevel(6);	
 	}
 }
